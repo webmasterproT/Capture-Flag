@@ -1,0 +1,38 @@
+{
+    "open_ai": {
+        "description": "OpenAI API Key for interfacing with AI models",
+        "key": "YOUR_OPENAI_API_KEY_HERE"
+    },
+    "ollama": {
+        "description": "Ollama API Key for advanced security tasks",
+        "key": "YOUR_OLLAMA_API_KEY_HERE"
+    },
+    "government_security": {
+        "description": "API Key for government security systems",
+        "key": "YOUR_GOVERNMENT_SECURITY_API_KEY_HERE"
+    },
+    "red_team_operations": {
+        "description": "API Key for Red Team operation tools",
+        "key": "YOUR_RED_TEAM_OPERATIONS_API_KEY_HERE"
+    },
+    "digital_forensics": {
+        "description": "API Key for digital forensics tools",
+        "key": "YOUR_DIGITAL_FORENSICS_API_KEY_HERE"
+    },
+    "network_analysis": {
+        "description": "API Key for network analysis tools",
+        "key": "YOUR_NETWORK_ANALYSIS_API_KEY_HERE"
+    },
+    "dynamic_code_execution": {
+        "description": "API Key for services that allow dynamic code execution",
+        "key": "YOUR_DYNAMIC_CODE_EXECUTION_API_KEY_HERE"
+    },
+    "polymorphic_code_generation": {
+        "description": "API Key for polymorphic code generation services",
+        "key": "YOUR_POLYMORPHIC_CODE_GENERATION_API_KEY_HERE"
+    },
+    "cyber_security_operations": {
+        "description": "API Key for cyber security operations mesh framework",
+        "key": "YOUR_CYBER_SECURITY_OPERATIONS_API_KEY_HERE"
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "adversary_kill_chains": [
+        {
+            "name": "Reconnaissance",
+            "description": "Adversaries gathering information they can use to plan future operations.",
+            "phases": [
+                "Open Source Intelligence",
+                "Social Engineering",
+                "Network Scanning",
+                "Vulnerability Scanning"
+            ]
+        },
+        {
+            "name": "Weaponization",
+            "description": "Adversaries creating remote access malware weapon, such as a virus or worm, tailored to one or more vulnerabilities.",
+            "phases": [
+                "Exploit Development",
+                "Payload Crafting",
+                "Polymorphic Code Generation",
+                "Test Against Security Measures"
+            ]
+        },
+        {
+            "name": "Delivery",
+            "description": "Adversaries transmitting the weapon to the targeted environment.",
+            "phases": [
+                "Email Attachments",
+                "Websites",
+                "USB Devices",
+                "Social Media"
+            ]
+        },
+        {
+            "name": "Exploitation",
+            "description": "Adversaries exploiting a vulnerability to execute code on a target system.",
+            "phases": [
+                "Remote Code Execution",
+                "SQL Injection",
+                "Cross-Site Scripting",
+                "Drive-by Compromise"
+            ]
+        },
+        {
+            "name": "Installation",
+            "description": "Adversaries installing a remote access tool on a target system.",
+            "phases": [
+                "Rootkit Installation",
+                "Backdoor Placement",
+                "Persistent Access",
+                "Defense Evasion"
+            ]
+        },
+        {
+            "name": "Command and Control",
+            "description": "Adversaries controlling the system remotely by establishing a command and control channel.",
+            "phases": [
+                "C2 Protocols",
+                "Encrypted Channels",
+                "Domain Generation Algorithms",
+                "Data Exfiltration"
+            ]
+        },
+        {
+            "name": "Actions on Objectives",
+            "description": "Adversaries taking actions to achieve their objectives on the target system.",
+            "phases": [
+                "Data Harvesting",
+                "Credential Dumping",
+                "Lateral Movement",
+                "Asset Manipulation"
+            ]
+        }
+    ]
+}

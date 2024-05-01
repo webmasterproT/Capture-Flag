@@ -1,0 +1,105 @@
+{
+    "reverse_engineering_challenges": [
+        {
+            "id": "re001",
+            "name": "Basic Binary Analysis",
+            "description": "Analyze the provided binary to understand its functionality and extract hidden information.",
+            "difficulty": "easy",
+            "file": "basic_binary_sample.bin",
+            "tools_required": [
+                "reverse_engineering_tools.py",
+                "debugging_tools.py"
+            ],
+            "skills_tested": [
+                "Static Analysis",
+                "Dynamic Analysis",
+                "Debugging"
+            ],
+            "hints": [
+                "Check for strings embedded in the binary.",
+                "Observe the control flow under different inputs."
+            ]
+        },
+        {
+            "id": "re002",
+            "name": "Intermediate Malware Dissection",
+            "description": "Dissect the given malware sample to determine its purpose and method of propagation without executing it in a live environment.",
+            "difficulty": "intermediate",
+            "file": "intermediate_malware_sample.exe",
+            "tools_required": [
+                "reverse_engineering_tools.py",
+                "forensic_tools.py"
+            ],
+            "skills_tested": [
+                "Static Analysis",
+                "Code Decompilation",
+                "Signature Analysis"
+            ],
+            "hints": [
+                "Identify the obfuscation techniques used.",
+                "Use a decompiler to generate higher-level code from the binary."
+            ]
+        },
+        {
+            "id": "re003",
+            "name": "Advanced Exploit Reverse Engineering",
+            "description": "Reverse engineer the provided exploit code to understand the vulnerability it targets and develop a patch to mitigate it.",
+            "difficulty": "hard",
+            "file": "advanced_exploit_code.bin",
+            "tools_required": [
+                "reverse_engineering_tools.py",
+                "debugging_tools.py",
+                "cryptography.py"
+            ],
+            "skills_tested": [
+                "Vulnerability Analysis",
+                "Exploit Techniques",
+                "Patch Development"
+            ],
+            "hints": [
+                "Analyze the payload and the buffer overflow technique.",
+                "Determine the exact vulnerable function or system call."
+            ]
+        },
+        {
+            "id": "re004",
+            "name": "Cryptographic Function Identification",
+            "description": "Identify and analyze the cryptographic functions used in the provided binary to understand the encryption/decryption process.",
+            "difficulty": "intermediate",
+            "file": "crypto_function_sample.bin",
+            "tools_required": [
+                "reverse_engineering_tools.py",
+                "cryptography.py"
+            ],
+            "skills_tested": [
+                "Cryptography",
+                "Pattern Recognition",
+                "Algorithm Analysis"
+            ],
+            "hints": [
+                "Look for common cryptographic constants and S-boxes.",
+                "Trace the execution flow during encryption/decryption."
+            ]
+        },
+        {
+            "id": "re005",
+            "name": "Embedded Firmware Analysis",
+            "description": "Analyze the firmware extracted from an embedded device to find vulnerabilities that could be exploited.",
+            "difficulty": "hard",
+            "file": "embedded_firmware_sample.bin",
+            "tools_required": [
+                "reverse_engineering_tools.py",
+                "network_analysis.py"
+            ],
+            "skills_tested": [
+                "Firmware Unpacking",
+                "Binary Exploitation",
+                "Network Protocol Analysis"
+            ],
+            "hints": [
+                "Identify the communication protocols in use.",
+                "Search for hardcoded credentials or backdoors."
+            ]
+        }
+    ]
+}

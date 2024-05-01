@@ -1,0 +1,63 @@
+{
+    "incident_logs": [
+        {
+            "incident_id": "IR-0001",
+            "timestamp": "2023-04-01T13:45:00Z",
+            "incident_type": "Unauthorized Access Attempt",
+            "description": "An attempt to access the system with invalid credentials was detected.",
+            "response_actions": [
+                {
+                    "action_id": "RA-0001",
+                    "action_type": "Alert Generation",
+                    "description": "Generated an alert and notified the security team."
+                },
+                {
+                    "action_id": "RA-0002",
+                    "action_type": "Account Lockout",
+                    "description": "The account in question was temporarily locked to prevent further attempts."
+                }
+            ],
+            "outcome": "Potential breach averted. No unauthorized access was granted.",
+            "follow_up_required": true,
+            "follow_up_actions": [
+                {
+                    "action_id": "FA-0001",
+                    "action_type": "Investigation",
+                    "description": "Initiate a detailed investigation to determine the source of the attempt."
+                }
+            ]
+        },
+        {
+            "incident_id": "IR-0002",
+            "timestamp": "2023-04-02T09:30:00Z",
+            "incident_type": "Malware Detection",
+            "description": "Antivirus software detected and quarantined a piece of malware.",
+            "response_actions": [
+                {
+                    "action_id": "RA-0003",
+                    "action_type": "Quarantine",
+                    "description": "The infected file was quarantined to prevent spread."
+                },
+                {
+                    "action_id": "RA-0004",
+                    "action_type": "System Scan",
+                    "description": "A full system scan was initiated to check for further infections."
+                }
+            ],
+            "outcome": "Malware was contained and no further infections were found.",
+            "follow_up_required": true,
+            "follow_up_actions": [
+                {
+                    "action_id": "FA-0002",
+                    "action_type": "Root Cause Analysis",
+                    "description": "Perform root cause analysis to understand the malware's entry point."
+                },
+                {
+                    "action_id": "FA-0003",
+                    "action_type": "Patch Application",
+                    "description": "Apply necessary patches to prevent similar incidents."
+                }
+            ]
+        }
+    ]
+}

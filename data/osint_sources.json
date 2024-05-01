@@ -1,0 +1,102 @@
+{
+    "osint_sources": [
+        {
+            "name": "Social Media Analysis",
+            "description": "Monitoring and analysis of social media platforms for potential threats or intelligence gathering.",
+            "tools": [
+                "TweetDeck",
+                "Hootsuite",
+                "Brandwatch"
+            ],
+            "methods": [
+                "Keyword monitoring",
+                "Sentiment analysis",
+                "Influencer tracking"
+            ]
+        },
+        {
+            "name": "Public Records",
+            "description": "Access to public records and databases for background checks and information verification.",
+            "tools": [
+                "PACER",
+                "Public Access to Court Electronic Records",
+                "LexisNexis"
+            ],
+            "methods": [
+                "Criminal record search",
+                "Business filings",
+                "Legal proceedings"
+            ]
+        },
+        {
+            "name": "Domain and IP Analysis",
+            "description": "Investigation of domain names and IP addresses to track ownership and associated activities.",
+            "tools": [
+                "WHOIS",
+                "DomainTools",
+                "RiskIQ"
+            ],
+            "methods": [
+                "Domain registration lookup",
+                "Reverse IP lookup",
+                "SSL certificate analysis"
+            ]
+        },
+        {
+            "name": "Cyber Threat Databases",
+            "description": "Utilization of databases that collect and share information about cyber threats and incidents.",
+            "tools": [
+                "AlienVault OTX",
+                "IBM X-Force Exchange",
+                "VirusTotal"
+            ],
+            "methods": [
+                "Threat intelligence feeds",
+                "Malware analysis",
+                "Indicator of compromise (IoC) extraction"
+            ]
+        },
+        {
+            "name": "Geospatial Analysis",
+            "description": "Use of mapping and location data to identify patterns and connections between events and entities.",
+            "tools": [
+                "Google Earth",
+                "ArcGIS",
+                "Palantir"
+            ],
+            "methods": [
+                "Satellite imagery analysis",
+                "Geofencing",
+                "Temporal analysis of movements"
+            ]
+        },
+        {
+            "name": "Deep and Dark Web Monitoring",
+            "description": "Exploration of the parts of the internet not indexed by traditional search engines for threat intelligence.",
+            "tools": [
+                "TOR",
+                "I2P",
+                "Freenet"
+            ],
+            "methods": [
+                "Forum infiltration",
+                "Marketplace monitoring",
+                "Private chat room surveillance"
+            ]
+        },
+        {
+            "name": "Technical Data and Logs",
+            "description": "Analysis of technical logs and data for signs of malicious activity or security breaches.",
+            "tools": [
+                "Splunk",
+                "Elasticsearch",
+                "LogRhythm"
+            ],
+            "methods": [
+                "Log file analysis",
+                "Network traffic analysis",
+                "Anomaly detection"
+            ]
+        }
+    ]
+}

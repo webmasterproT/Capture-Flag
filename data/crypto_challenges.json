@@ -1,0 +1,101 @@
+{
+    "crypto_challenges": [
+        {
+            "id": "classic_cipher_001",
+            "name": "Caesar Cipher Decryption",
+            "description": "Decrypt a message that was encrypted using a Caesar cipher with an unknown shift.",
+            "difficulty": "easy",
+            "hints": [
+                "The Caesar cipher is a type of substitution cipher in which each letter in the plaintext is shifted a certain number of places down the alphabet.",
+                "You can perform a frequency analysis on the encrypted text to guess the shift used."
+            ],
+            "solution_function": "decrypt_caesar_cipher",
+            "test_cases": [
+                {
+                    "input": "Khoor Zruog!",
+                    "output": "Hello World!"
+                },
+                {
+                    "input": "Grzduwlphv!",
+                    "output": "Greetings!"
+                }
+            ]
+        },
+        {
+            "id": "modern_cipher_001",
+            "name": "AES Encryption Challenge",
+            "description": "Given an AES-encrypted text and the key, decrypt the message.",
+            "difficulty": "medium",
+            "hints": [
+                "Advanced Encryption Standard (AES) is a symmetric encryption algorithm.",
+                "The same key is used for both encrypting and decrypting the data."
+            ],
+            "solution_function": "decrypt_aes",
+            "test_cases": [
+                {
+                    "input": {
+                        "encrypted_text": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+                        "key": "password12345678"
+                    },
+                    "output": "Hello World!"
+                }
+            ]
+        },
+        {
+            "id": "modern_cipher_002",
+            "name": "3DES Decryption Challenge",
+            "description": "Decrypt a message that was encrypted with Triple DES using the provided keys.",
+            "difficulty": "hard",
+            "hints": [
+                "Triple DES uses three individual keys with DES.",
+                "Ensure the correct mode of operation is used."
+            ],
+            "solution_function": "decrypt_3des",
+            "test_cases": [
+                {
+                    "input": {
+                        "encrypted_text": "a1d0e56f8dc6292773603d0d6abbdd62",
+                        "key1": "firstkey123",
+                        "key2": "secondkey456",
+                        "key3": "thirdkey789"
+                    },
+                    "output": "Secret Message"
+                }
+            ]
+        },
+        {
+            "id": "steganography_001",
+            "name": "Image Steganography",
+            "description": "Retrieve the hidden message from an image file using steganographic techniques.",
+            "difficulty": "medium",
+            "hints": [
+                "Look for the least significant bits of the image pixels.",
+                "The message may be encoded in a pattern across the image."
+            ],
+            "solution_function": "decode_steganography",
+            "test_cases": [
+                {
+                    "input": "hidden_message.png",
+                    "output": "The hidden message is: 'AI will lead the future.'"
+                }
+            ]
+        },
+        {
+            "id": "reverse_engineering_001",
+            "name": "Binary Reverse Engineering",
+            "description": "Analyze the provided binary file to find the secret key.",
+            "difficulty": "hard",
+            "hints": [
+                "Use disassemblers and debuggers to understand the binary's structure.",
+                "Look for cryptographic function calls within the binary."
+            ],
+            "solution_function": "reverse_engineer_binary",
+            "test_cases": [
+                {
+                    "input": "encrypted_binary.bin",
+                    "output": "SecretKey123!"
+                }
+            ]
+        }
+    ]
+}

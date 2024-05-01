@@ -1,0 +1,79 @@
+{
+    "data_collection_records": [
+        {
+            "id": "dc001",
+            "timestamp": "2023-04-01T12:00:00Z",
+            "operation": "network_traffic_analysis",
+            "parameters": {
+                "source_ip": "192.168.1.10",
+                "destination_ip": "10.0.0.5",
+                "protocol": "TCP",
+                "port": 443
+            },
+            "results": {
+                "data_transferred": "500MB",
+                "session_duration": "2 hours",
+                "anomalies_detected": false
+            },
+            "action_taken": "logged_and_monitored"
+        },
+        {
+            "id": "dc002",
+            "timestamp": "2023-04-01T14:30:00Z",
+            "operation": "forensic_artifact_collection",
+            "parameters": {
+                "host_identifier": "host-17",
+                "artifact_type": "log_files",
+                "location": "/var/log/"
+            },
+            "results": {
+                "artifacts_collected": 20,
+                "relevant_artifacts": 5,
+                "compromised_integrity": false
+            },
+            "action_taken": "analysis_pending"
+        },
+        {
+            "id": "dc003",
+            "timestamp": "2023-04-01T15:45:00Z",
+            "operation": "osint_gathering",
+            "parameters": {
+                "target": "example.com",
+                "information_type": "domain_records"
+            },
+            "results": {
+                "records_found": 12,
+                "sensitive_information_leaked": true
+            },
+            "action_taken": "escalated_to_cyber_ops"
+        },
+        {
+            "id": "dc004",
+            "timestamp": "2023-04-01T16:20:00Z",
+            "operation": "vulnerability_scanning",
+            "parameters": {
+                "target_network": "10.0.0.0/24",
+                "scan_depth": "full"
+            },
+            "results": {
+                "vulnerabilities_found": 7,
+                "critical_vulnerabilities": 3
+            },
+            "action_taken": "patch_deployment_initiated"
+        },
+        {
+            "id": "dc005",
+            "timestamp": "2023-04-01T17:00:00Z",
+            "operation": "intrusion_detection",
+            "parameters": {
+                "network_segment": "dmz",
+                "detection_method": "anomaly_based"
+            },
+            "results": {
+                "intrusions_detected": 1,
+                "false_positives": 0
+            },
+            "action_taken": "containment_procedures_activated"
+        }
+    ]
+}

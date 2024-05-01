@@ -1,0 +1,64 @@
+{
+    "rce_techniques": [
+        {
+            "name": "Buffer Overflow",
+            "description": "Exploiting a program's memory allocation by overrunning a buffer's boundary and overwriting adjacent memory.",
+            "vector": "Stack-based, Heap-based",
+            "mitigation": "Implementing stack canaries, using non-executable stacks, and employing address space layout randomization (ASLR)."
+        },
+        {
+            "name": "Command Injection",
+            "description": "Injecting and executing commands on a host operating system via a vulnerable application.",
+            "vector": "Web applications, System utilities",
+            "mitigation": "Validating and sanitizing all user inputs, using secure coding practices."
+        },
+        {
+            "name": "SQL Injection",
+            "description": "Executing arbitrary SQL code on a database server through a vulnerable application.",
+            "vector": "Database-connected applications",
+            "mitigation": "Using prepared statements and parameterized queries, regularly updating and patching database systems."
+        },
+        {
+            "name": "Cross-Site Scripting (XSS)",
+            "description": "Injecting malicious scripts into content from otherwise trusted websites.",
+            "vector": "Web browsers, Web applications",
+            "mitigation": "Encoding data on output, using Content Security Policy (CSP), validating user inputs."
+        },
+        {
+            "name": "Server-Side Request Forgery (SSRF)",
+            "description": "Manipulating a server to make requests to internal services within the organization or to external third-party systems.",
+            "vector": "Web applications",
+            "mitigation": "Whitelisting allowable resources, employing proper URL parsing and validation."
+        },
+        {
+            "name": "Remote File Inclusion (RFI)",
+            "description": "Exploiting vulnerabilities in web applications to execute remote files from a server.",
+            "vector": "Web applications",
+            "mitigation": "Disabling remote file inclusion, validating user inputs, and maintaining updated software."
+        },
+        {
+            "name": "Local File Inclusion (LFI)",
+            "description": "Exploiting vulnerabilities to include files on a server through the web application.",
+            "vector": "Web applications",
+            "mitigation": "Validating user inputs, employing proper file handling, and updating software."
+        },
+        {
+            "name": "Deserialization Vulnerability",
+            "description": "Exploiting insecure deserialization to execute arbitrary code within an application's context.",
+            "vector": "Web applications, Network services",
+            "mitigation": "Avoiding serialization of sensitive data, implementing integrity checks, and using secure serialization libraries."
+        },
+        {
+            "name": "Unrestricted File Upload",
+            "description": "Uploading files with dangerous types that can be executed on the server.",
+            "vector": "Web applications",
+            "mitigation": "Restricting file types, scanning uploaded files for malware, and segregating file storage."
+        },
+        {
+            "name": "Remote Code Execution via Third-party Services",
+            "description": "Exploiting vulnerabilities in third-party services and libraries to execute code remotely.",
+            "vector": "Third-party APIs, Libraries",
+            "mitigation": "Regularly updating third-party services and libraries, auditing for known vulnerabilities."
+        }
+    ]
+}

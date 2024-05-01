@@ -1,0 +1,94 @@
+{
+    "post_mortem_templates": [
+        {
+            "template_id": "network_intrusion_post_mortem",
+            "title": "Network Intrusion Post-Mortem Report",
+            "sections": [
+                {
+                    "section_title": "Executive Summary",
+                    "section_content": "This section provides an overview of the incident, including the impact and the response actions taken."
+                },
+                {
+                    "section_title": "Incident Overview",
+                    "section_content": "Detailed description of the incident, including timeline, systems affected, and methods of detection."
+                },
+                {
+                    "section_title": "Technical Analysis",
+                    "section_content": "In-depth technical analysis of the intrusion, including attack vectors, exploited vulnerabilities, and tools used by the attackers."
+                },
+                {
+                    "section_title": "Response and Mitigation",
+                    "section_content": "Outline of the immediate response actions taken to mitigate the incident and prevent further damage."
+                },
+                {
+                    "section_title": "Lessons Learned",
+                    "section_content": "Critical assessment of the incident response and identification of areas for improvement."
+                },
+                {
+                    "section_title": "Recommendations",
+                    "section_content": "Actionable recommendations to prevent similar incidents in the future, including policy changes, training, and system hardening."
+                }
+            ]
+        },
+        {
+            "template_id": "ransomware_attack_post_mortem",
+            "title": "Ransomware Attack Post-Mortem Report",
+            "sections": [
+                {
+                    "section_title": "Executive Summary",
+                    "section_content": "Summary of the ransomware attack, including the extent of the encryption and the ransom demand."
+                },
+                {
+                    "section_title": "Incident Overview",
+                    "section_content": "Detailed account of the ransomware attack, including the initial infection point, spread, and encryption timeline."
+                },
+                {
+                    "section_title": "Technical Analysis",
+                    "section_content": "Technical breakdown of the ransomware strain, including its behavior, persistence mechanisms, and encryption methods."
+                },
+                {
+                    "section_title": "Response and Mitigation",
+                    "section_content": "Description of the response to the ransomware attack, including containment efforts and recovery processes."
+                },
+                {
+                    "section_title": "Lessons Learned",
+                    "section_content": "Evaluation of the effectiveness of the response and identification of improvements to security posture."
+                },
+                {
+                    "section_title": "Recommendations",
+                    "section_content": "Recommendations for strengthening defenses against ransomware, including backup strategies, user training, and endpoint protection."
+                }
+            ]
+        },
+        {
+            "template_id": "data_breach_post_mortem",
+            "title": "Data Breach Post-Mortem Report",
+            "sections": [
+                {
+                    "section_title": "Executive Summary",
+                    "section_content": "Overview of the data breach incident, including the type of data compromised and the potential impact."
+                },
+                {
+                    "section_title": "Incident Overview",
+                    "section_content": "Comprehensive description of the breach, including how the breach was discovered, the data exfiltration methods, and the duration of the exposure."
+                },
+                {
+                    "section_title": "Technical Analysis",
+                    "section_content": "Analysis of the breach methods, including exploited vulnerabilities, attack patterns, and lateral movements within the network."
+                },
+                {
+                    "section_title": "Response and Mitigation",
+                    "section_content": "Detailed response actions taken to secure the systems, notify affected parties, and comply with legal requirements."
+                },
+                {
+                    "section_title": "Lessons Learned",
+                    "section_content": "Assessment of the incident handling and identification of key takeaways to improve future incident response."
+                },
+                {
+                    "section_title": "Recommendations",
+                    "section_content": "Strategic recommendations to enhance data security, including access controls, encryption, and monitoring systems."
+                }
+            ]
+        }
+    ]
+}

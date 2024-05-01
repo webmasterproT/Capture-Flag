@@ -1,0 +1,72 @@
+{
+    "riskAssessmentModels": [
+        {
+            "modelId": "RA-001",
+            "modelName": "Standard Risk Scoring",
+            "description": "A quantitative model that assigns a score to each identified risk based on its potential impact and likelihood.",
+            "factors": [
+                "ThreatCapability",
+                "ThreatIntent",
+                "VulnerabilitySeverity",
+                "AssetValue"
+            ],
+            "calculationMethod": "Risk = (ThreatCapability + ThreatIntent + VulnerabilitySeverity) * AssetValue",
+            "usageGuidelines": "Use for general risk assessment across various systems and environments."
+        },
+        {
+            "modelId": "RA-002",
+            "modelName": "MITRE ATT&CK Matrix Mapping",
+            "description": "Maps identified risks to the MITRE ATT&CK framework to understand tactics, techniques, and procedures (TTPs) used by adversaries.",
+            "factors": [
+                "Tactic",
+                "Technique",
+                "Procedure",
+                "DetectedIncidents"
+            ],
+            "calculationMethod": "Risk = Sum of (Tactic + Technique + Procedure) occurrences * DetectedIncidents",
+            "usageGuidelines": "Use to align risk assessment with known adversary behaviors and improve defensive strategies."
+        },
+        {
+            "modelId": "RA-003",
+            "modelName": "Adversary Kill Chain Analysis",
+            "description": "Analyzes the stages of an attack lifecycle to identify and prioritize risks associated with each stage.",
+            "factors": [
+                "Reconnaissance",
+                "Weaponization",
+                "Delivery",
+                "Exploitation",
+                "Installation",
+                "CommandControl",
+                "ActionsOnObjectives"
+            ],
+            "calculationMethod": "Risk = Sum of risks identified at each stage of the kill chain",
+            "usageGuidelines": "Use for threat hunting and incident response to disrupt adversary actions."
+        },
+        {
+            "modelId": "RA-004",
+            "modelName": "Cyber Resilience Evaluation",
+            "description": "Evaluates the organization's ability to anticipate, withstand, recover from, and adapt to adverse conditions, stresses, attacks, or compromises on cyber resources.",
+            "factors": [
+                "PreventativeControlsEffectiveness",
+                "DetectiveControlsEffectiveness",
+                "CorrectiveControlsEffectiveness",
+                "AdaptiveControlsEffectiveness"
+            ],
+            "calculationMethod": "ResilienceScore = Average of (Preventative + Detective + Corrective + Adaptive) controls effectiveness",
+            "usageGuidelines": "Use to measure and improve the organization's cyber resilience posture."
+        },
+        {
+            "modelId": "RA-005",
+            "modelName": "Dynamic Threat Assessment",
+            "description": "A real-time model that dynamically assesses risks based on current threat intelligence and system vulnerabilities.",
+            "factors": [
+                "RealTimeThreatIntelligence",
+                "SystemVulnerabilities",
+                "ActiveIncidents",
+                "EnvironmentalChanges"
+            ],
+            "calculationMethod": "Risk = RealTimeThreatIntelligence * SystemVulnerabilities + ActiveIncidents + EnvironmentalChanges",
+            "usageGuidelines": "Use for continuous monitoring and rapid response to emerging threats."
+        }
+    ]
+}

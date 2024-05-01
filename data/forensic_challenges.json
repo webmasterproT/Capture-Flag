@@ -1,0 +1,76 @@
+{
+    "forensic_challenges": [
+        {
+            "id": "log_analysis_001",
+            "name": "Log File Anomaly Detection",
+            "description": "Analyze the provided log files to identify unusual patterns that could indicate a security breach.",
+            "difficulty": "medium",
+            "required_skills": ["log_analysis", "pattern_recognition"],
+            "scenario": "A series of log files from a government server have been provided. Your task is to identify any anomalies that could suggest unauthorized access or malicious activity.",
+            "hints": [
+                "Look for login attempts during unusual hours.",
+                "Check for repeated failed login attempts from the same IP address.",
+                "Search for any commands that are not part of the usual server operations."
+            ],
+            "resources": [
+                "data/logging_policy.json",
+                "data/user_activity_logs.json"
+            ],
+            "solution": "solutions/log_analysis_001_solution.md"
+        },
+        {
+            "id": "network_traffic_002",
+            "name": "Encrypted Traffic Analysis",
+            "description": "Decrypt and analyze the provided network packet capture to uncover hidden messages.",
+            "difficulty": "hard",
+            "required_skills": ["cryptography", "network_analysis"],
+            "scenario": "A packet capture file has been intercepted. It is suspected to contain encrypted messages that could compromise national security. Decrypt the messages and analyze their content.",
+            "hints": [
+                "Identify the encryption algorithm used in the packet capture.",
+                "Use known plaintext attacks if any repetitive data patterns are found.",
+                "Check for common cryptographic weaknesses or implementation flaws."
+            ],
+            "resources": [
+                "data/packet_monitoring_filters.json",
+                "data/forensic_artifacts.json"
+            ],
+            "solution": "solutions/network_traffic_002_solution.md"
+        },
+        {
+            "id": "malware_forensics_003",
+            "name": "Malware Reverse Engineering",
+            "description": "Perform reverse engineering on the provided malware sample to understand its behavior and origin.",
+            "difficulty": "expert",
+            "required_skills": ["reverse_engineering", "malware_analysis"],
+            "scenario": "A new strain of malware has been detected in a government network. Reverse engineer the sample to determine its capabilities, origin, and potential mitigation strategies.",
+            "hints": [
+                "Disassemble the binary to analyze the code structure.",
+                "Look for any network communication routines to identify command and control servers.",
+                "Search for strings, constants, and other indicators that could reveal the malware's purpose."
+            ],
+            "resources": [
+                "data/reverse_engineering_samples.json",
+                "data/threat_indicators.json"
+            ],
+            "solution": "solutions/malware_forensics_003_solution.md"
+        },
+        {
+            "id": "steganography_004",
+            "name": "Steganographic Message Recovery",
+            "description": "Detect and extract hidden messages from the provided multimedia files.",
+            "difficulty": "medium",
+            "required_skills": ["steganography", "media_analysis"],
+            "scenario": "Sensitive information has been leaked through multimedia files. Your task is to uncover any steganographically hidden messages within these files.",
+            "hints": [
+                "Analyze the file headers for anomalies.",
+                "Look for patterns in the least significant bits of image or audio files.",
+                "Use spectrum analysis to detect hidden messages in audio files."
+            ],
+            "resources": [
+                "data/steganography_samples.json",
+                "data/forensic_artifacts.json"
+            ],
+            "solution": "solutions/steganography_004_solution.md"
+        }
+    ]
+}

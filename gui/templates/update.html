@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update System</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="update-status" class="container">
+        <h1>System Update</h1>
+        <p>Keep your system up to date to ensure it has the latest features and security improvements.</p>
+        
+        <div id="update-available" class="update-section">
+            <h2>Update Available</h2>
+            <p>An update for the system is available. Please review the update details before proceeding.</p>
+            <button id="download-update" onclick="downloadUpdate()">Download Update</button>
+        </div>
+        
+        <div id="current-version" class="update-section">
+            <h2>Current Version</h2>
+            <p>Your current system version is displayed below. Check regularly for updates to maintain system integrity and capabilities.</p>
+            <div id="version-info">
+                <!-- Version info will be dynamically inserted here by the system -->
+            </div>
+        </div>
+        
+        <div id="update-progress" class="update-section" style="display: none;">
+            <h2>Update Progress</h2>
+            <p>Update is in progress. Please do not turn off your system during the update.</p>
+            <div id="progress-bar">
+                <!-- Progress bar will be dynamically updated by the system -->
+            </div>
+        </div>
+        
+        <div id="update-complete" class="update-section" style="display: none;">
+            <h2>Update Complete</h2>
+            <p>Your system has been successfully updated to the latest version.</p>
+            <button id="restart-system" onclick="restartSystem()">Restart System</button>
+        </div>
+        
+        <div id="update-error" class="update-section" style="display: none;">
+            <h2>Update Error</h2>
+            <p>An error occurred during the update process. Please try again or contact support if the problem persists.</p>
+            <button id="retry-update" onclick="retryUpdate()">Retry Update</button>
+        </div>
+    </div>
+
+    <script src="assets/logo.png"></script> <!-- Placeholder for actual script file reference -->
+    <script>
+        function downloadUpdate() {
+            // Placeholder for function to handle update download
+            // This function will communicate with the update_manager.py to initiate the download process
+        }
+
+        function restartSystem() {
+            // Placeholder for function to restart the system after an update
+            // This function will communicate with the system's backend to safely restart the system
+        }
+
+        function retryUpdate() {
+            // Placeholder for function to retry the update in case of an error
+            // This function will communicate with the update_manager.py to retry the update process
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+    "steganography_samples": [
+        {
+            "id": "sample_001",
+            "description": "Basic LSB steganography in PNG image",
+            "image_path": "steganography_samples/sample_001.png",
+            "extraction_method": "LSB",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_002",
+            "description": "Spectrogram analysis required for audio file",
+            "audio_path": "steganography_samples/sample_002.wav",
+            "extraction_method": "Spectrogram",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_003",
+            "description": "Encoded message in the metadata of a JPEG file",
+            "image_path": "steganography_samples/sample_003.jpg",
+            "extraction_method": "Metadata",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_004",
+            "description": "Steganography using palette manipulation in GIF",
+            "image_path": "steganography_samples/sample_004.gif",
+            "extraction_method": "Palette",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_005",
+            "description": "Hidden ZIP file within a JPEG image",
+            "image_path": "steganography_samples/sample_005.jpg",
+            "extraction_method": "File Append",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_006",
+            "description": "Morse code hidden in the first letter of each word in a text file",
+            "text_path": "steganography_samples/sample_006.txt",
+            "extraction_method": "Text Pattern",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_007",
+            "description": "Steganography in video file through frame differencing",
+            "video_path": "steganography_samples/sample_007.mp4",
+            "extraction_method": "Frame Differencing",
+            "hidden_message": "",
+            "solved": false
+        },
+        {
+            "id": "sample_008",
+            "description": "Hidden message in the whitespace of a source code file",
+            "code_path": "steganography_samples/sample_008.py",
+            "extraction_method": "Whitespace Encoding",
+            "hidden_message": "",
+            "solved": false
+        }
+    ]
+}

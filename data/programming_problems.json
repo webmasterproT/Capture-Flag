@@ -1,0 +1,86 @@
+{
+    "programming_problems": [
+        {
+            "id": "classic_cipher",
+            "description": "Solve the classic Caesar cipher encryption.",
+            "difficulty": "easy",
+            "function_name": "solve_caesar_cipher",
+            "parameters": [
+                {"name": "encrypted_text", "type": "string"},
+                {"name": "shift", "type": "integer"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "A Caesar cipher shifts each letter in the plaintext by a fixed number down the alphabet."
+            ]
+        },
+        {
+            "id": "buffer_overflow_exploit",
+            "description": "Create a buffer overflow exploit for a given vulnerable program.",
+            "difficulty": "hard",
+            "function_name": "create_buffer_overflow_exploit",
+            "parameters": [
+                {"name": "vulnerable_binary", "type": "string"},
+                {"name": "target_address", "type": "string"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "Overwrite the return address on the stack to redirect execution to your payload."
+            ]
+        },
+        {
+            "id": "sql_injection",
+            "description": "Craft an SQL injection payload to retrieve all user data from a database.",
+            "difficulty": "medium",
+            "function_name": "craft_sql_injection_payload",
+            "parameters": [
+                {"name": "table_name", "type": "string"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "Use UNION SELECT to combine the result of the original query with the results from the injected query."
+            ]
+        },
+        {
+            "id": "reverse_shell_code",
+            "description": "Write a reverse shell code in Python that connects back to a given IP and port.",
+            "difficulty": "medium",
+            "function_name": "write_reverse_shell_code",
+            "parameters": [
+                {"name": "ip_address", "type": "string"},
+                {"name": "port", "type": "integer"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "Use Python's socket library to establish a connection back to the attacker's machine."
+            ]
+        },
+        {
+            "id": "modern_crypto",
+            "description": "Decrypt a message encrypted with AES-256.",
+            "difficulty": "hard",
+            "function_name": "decrypt_aes_256",
+            "parameters": [
+                {"name": "encrypted_data", "type": "string"},
+                {"name": "key", "type": "string"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "Use a cryptographic library that supports AES-256 to decrypt the data."
+            ]
+        },
+        {
+            "id": "steganography_detection",
+            "description": "Detect hidden messages in an image file using steganography.",
+            "difficulty": "medium",
+            "function_name": "detect_steganography",
+            "parameters": [
+                {"name": "image_path", "type": "string"}
+            ],
+            "return_type": "string",
+            "hints": [
+                "Look for anomalies in the least significant bits of the image pixels."
+            ]
+        }
+    ]
+}

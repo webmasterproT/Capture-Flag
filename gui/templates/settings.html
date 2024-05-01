@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div id="settings-form">
+        <h1>System Configuration</h1>
+        <form action="/update_settings" method="post">
+            <label for="api-key">AI API Key:</label>
+            <input type="text" id="api-key" name="api_key" placeholder="Enter AI API Key" required>
+
+            <label for="user-preferences">User Preferences:</label>
+            <textarea id="user-preferences" name="user_preferences" placeholder="JSON format" rows="6"></textarea>
+
+            <label for="logging-policy">Logging Policy:</label>
+            <select id="logging-policy" name="logging_policy">
+                <option value="all">Log All Activities</option>
+                <option value="critical">Log Critical Activities</option>
+                <option value="off">Turn Off Logging</option>
+            </select>
+
+            <label for="threat-level">Threat Level for Alerts:</label>
+            <input type="range" id="threat-level" name="threat_level" min="1" max="10">
+
+            <label for="update-manifest">Update Manifest:</label>
+            <input type="file" id="update-manifest" name="update_manifest" accept=".json">
+
+            <label for="sigma-rules">SIGMA Rules:</label>
+            <input type="file" id="sigma-rules" name="sigma_rules" accept=".json">
+
+            <label for="mitre-attack">MITRE ATT&CK Framework:</label>
+            <input type="file" id="mitre-attack" name="mitre_attack" accept=".json">
+
+            <label for="kill-chain">Adversary Kill Chains:</label>
+            <input type="file" id="kill-chain" name="kill_chain" accept=".json">
+
+            <label for="detection-rules">Detection Rules:</label>
+            <input type="file" id="detection-rules" name="detection_rules" accept=".json">
+
+            <label for="forensic-artifacts">Forensic Artifacts:</label>
+            <input type="file" id="forensic-artifacts" name="forensic_artifacts" accept=".json">
+
+            <label for="ctf-scenarios">CTF Scenarios:</label>
+            <input type="file" id="ctf-scenarios" name="ctf_scenarios" accept=".json">
+
+            <label for="red-team-tools">Red Team Tools:</label>
+            <input type="file" id="red-team-tools" name="red_team_tools" accept=".json">
+
+            <label for="exploit-payloads">Exploit Payloads:</label>
+            <input type="file" id="exploit-payloads" name="exploit_payloads" accept=".json">
+
+            <label for="system-integrity-checks">System Integrity Checks:</label>
+            <input type="file" id="system-integrity-checks" name="system_integrity_checks" accept=".json">
+
+            <button type="submit">Save Settings</button>
+        </form>
+    </div>
+    <script src="assets/logo.png"></script> <!-- Placeholder for potential script file -->
+</body>
+</html>

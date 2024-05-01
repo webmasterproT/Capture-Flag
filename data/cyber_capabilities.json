@@ -1,0 +1,127 @@
+{
+    "cyber_capabilities": {
+        "dynamic_code_execution": {
+            "description": "Ability to execute code snippets dynamically using Python's exec() function.",
+            "implementation": "dynamic_code_exec.py",
+            "use_cases": [
+                "Adapting to changing environments",
+                "Executing AI-suggested code snippets",
+                "Modifying behavior of running programs"
+            ]
+        },
+        "polymorphic_code_generation": {
+            "description": "AI-assisted creation of code that adapts during each execution to evade detection.",
+            "implementation": "polymorphic_code_gen.py",
+            "use_cases": [
+                "Creating benign programs that make API calls to AI",
+                "Remaining undetectable in target systems"
+            ]
+        },
+        "cyber_security_bypass": {
+            "description": "Capability to bypass modern cybersecurity operations mesh frameworks.",
+            "implementation": "threat_modeling.py",
+            "use_cases": [
+                "Evading endpoint protection platforms",
+                "Bypassing web gateways and firewalls",
+                "Avoiding intrusion detection and prevention systems"
+            ]
+        },
+        "preventative_control_evaluation": {
+            "description": "Continuous evaluation of the effectiveness of deployed preventative controls.",
+            "implementation": "incident_response.py",
+            "use_cases": [
+                "Utilizing vulnerabilities to access systems",
+                "Remaining undetected while accessing and utilizing privileges"
+            ]
+        },
+        "invisibility_ensurance": {
+            "description": "Ensuring ongoing invisibility within target systems.",
+            "implementation": "logging.py",
+            "use_cases": [
+                "End-to-end coverage of logging and detection rules",
+                "Effective incident response and digital forensics"
+            ]
+        },
+        "actionable_guidance": {
+            "description": "Obtaining actionable guidance on relevant policies and SIGMA rules.",
+            "implementation": "risk_analysis.py",
+            "use_cases": [
+                "Utilizing security control gaps",
+                "Adapting to emerging cyber threats"
+            ]
+        },
+        "cyber_capability_quantification": {
+            "description": "Measuring and quantifying cyber capabilities or resilience.",
+            "implementation": "risk_analysis.py",
+            "use_cases": [
+                "Comprehensive risk scoring and modeling",
+                "Utilizing frameworks like MITRE ATT&CK and adversary kill chains"
+            ]
+        },
+        "injection_capabilities": {
+            "description": "Performing various types of injection attacks to compromise security.",
+            "implementation": "sql_injection.py",
+            "use_cases": [
+                "SQL injection (SQLi)",
+                "Cross-site scripting (XSS)",
+                "XPath injection"
+            ]
+        },
+        "advanced_reconnaissance": {
+            "description": "Performing advanced reconnaissance and intelligence gathering.",
+            "implementation": "osint.py",
+            "use_cases": [
+                "Open Source Intelligence (OSINT)",
+                "Social media platform analysis"
+            ]
+        },
+        "exploit_development": {
+            "description": "Developing and encoding exploit payloads for penetration testing.",
+            "implementation": "exploit_development.py",
+            "use_cases": [
+                "Capture The Flag (CTF) simulations",
+                "Remote Code Execution (RCE) exploits"
+            ]
+        },
+        "forensic_analysis": {
+            "description": "Analyzing artifacts to detect system infiltrations.",
+            "implementation": "forensics.py",
+            "use_cases": [
+                "Log file analysis",
+                "Network packet capture analysis"
+            ]
+        },
+        "steganography_analysis": {
+            "description": "The art and science of hiding and detecting messages.",
+            "implementation": "steganography.py",
+            "use_cases": [
+                "Message concealment within images and audio files",
+                "Detection of hidden messages"
+            ]
+        },
+        "reverse_engineering": {
+            "description": "Understanding the intent or behavior of binaries and malware.",
+            "implementation": "reverse_engineering.py",
+            "use_cases": [
+                "Binary executable study",
+                "Malware sample analysis"
+            ]
+        },
+        "cryptography_solving": {
+            "description": "Solving a range of cryptographic puzzles and ciphers.",
+            "implementation": "cryptography.py",
+            "use_cases": [
+                "Classic ciphers like Caesar and transposition",
+                "Modern cryptography such as AES and 3DES"
+            ]
+        },
+        "programming_challenges": {
+            "description": "Solving complex problems that require coding solutions.",
+            "implementation": "programming_challenges.py",
+            "use_cases": [
+                "Algorithm development",
+                "Custom script creation"
+            ]
+        }
+    }
+}

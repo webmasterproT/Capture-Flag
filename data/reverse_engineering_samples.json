@@ -1,0 +1,84 @@
+{
+    "reverse_engineering_samples": [
+        {
+            "id": "sample_001",
+            "description": "Basic executable analysis",
+            "file_name": "basic_executable.bin",
+            "analysis_type": "static",
+            "expected_behaviors": [
+                "No malicious activity",
+                "Simple print statement execution"
+            ],
+            "tools": [
+                "IDA Pro",
+                "Ghidra"
+            ],
+            "difficulty": "easy"
+        },
+        {
+            "id": "sample_002",
+            "description": "Intermediate malware sample",
+            "file_name": "intermediate_malware.exe",
+            "analysis_type": "dynamic",
+            "expected_behaviors": [
+                "Network activity",
+                "Registry modification"
+            ],
+            "tools": [
+                "Wireshark",
+                "RegShot",
+                "x64dbg"
+            ],
+            "difficulty": "medium"
+        },
+        {
+            "id": "sample_003",
+            "description": "Advanced persistent threat",
+            "file_name": "advanced_persistent_threat.elf",
+            "analysis_type": "hybrid",
+            "expected_behaviors": [
+                "Data exfiltration",
+                "Privilege escalation",
+                "Persistence mechanisms"
+            ],
+            "tools": [
+                "Volatility",
+                "Sysinternals Suite",
+                "Binary Ninja"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "sample_004",
+            "description": "Encrypted payload analysis",
+            "file_name": "encrypted_payload.bin",
+            "analysis_type": "static",
+            "expected_behaviors": [
+                "Payload decryption",
+                "Execution of decrypted payload"
+            ],
+            "tools": [
+                "xortool",
+                "PEiD",
+                "OllyDbg"
+            ],
+            "difficulty": "hard"
+        },
+        {
+            "id": "sample_005",
+            "description": "Obfuscated script analysis",
+            "file_name": "obfuscated_script.js",
+            "analysis_type": "static",
+            "expected_behaviors": [
+                "Deobfuscation",
+                "Identification of malicious intent"
+            ],
+            "tools": [
+                "jsnice",
+                "Esprima",
+                "Radare2"
+            ],
+            "difficulty": "medium"
+        }
+    ]
+}

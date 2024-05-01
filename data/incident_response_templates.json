@@ -1,0 +1,84 @@
+{
+    "incident_response_templates": [
+        {
+            "template_id": "IR_BASIC_ASSESSMENT",
+            "description": "Basic incident response template for initial assessment of the situation.",
+            "steps": [
+                "Identify the nature of the incident (e.g., unauthorized access, data breach, service disruption).",
+                "Determine the scope of the incident (affected systems, data, and services).",
+                "Assess the impact on operations and sensitive data.",
+                "Initiate communication protocols to inform stakeholders and response teams."
+            ],
+            "checklist": {
+                "incident_classification": "Completed",
+                "scope_identification": "Pending",
+                "impact_assessment": "Pending",
+                "stakeholder_communication": "Pending"
+            }
+        },
+        {
+            "template_id": "IR_ADVANCED_CONTAINMENT",
+            "description": "Advanced incident response template focusing on containment strategies.",
+            "steps": [
+                "Isolate affected systems to prevent further spread of the incident.",
+                "Apply security patches or workarounds to vulnerable systems.",
+                "Re-route network traffic to avoid compromised paths.",
+                "Disable compromised accounts and credentials."
+            ],
+            "checklist": {
+                "system_isolation": "Pending",
+                "patch_application": "Pending",
+                "traffic_re_routing": "Pending",
+                "account_disabling": "Pending"
+            }
+        },
+        {
+            "template_id": "IR_ERADICATION_RECOVERY",
+            "description": "Template for eradication of threats and recovery of services.",
+            "steps": [
+                "Remove malware or unauthorized access points from systems.",
+                "Restore systems and data from backups.",
+                "Conduct a security sweep to ensure threat removal.",
+                "Resume normal operations with monitoring for anomalies."
+            ],
+            "checklist": {
+                "malware_removal": "Pending",
+                "system_restoration": "Pending",
+                "security_sweep": "Pending",
+                "operations_resumption": "Pending"
+            }
+        },
+        {
+            "template_id": "IR_POST_MORTEM_ANALYSIS",
+            "description": "Template for conducting a post-mortem analysis after an incident.",
+            "steps": [
+                "Document the incident timeline and actions taken.",
+                "Analyze the root cause and entry points of the incident.",
+                "Evaluate the effectiveness of the incident response.",
+                "Recommend improvements to prevent future incidents."
+            ],
+            "checklist": {
+                "incident_documentation": "Pending",
+                "root_cause_analysis": "Pending",
+                "response_evaluation": "Pending",
+                "preventative_measures": "Pending"
+            }
+        },
+        {
+            "template_id": "IR_LEGAL_COMPLIANCE",
+            "description": "Template to ensure legal and regulatory compliance during incident response.",
+            "steps": [
+                "Review applicable laws and regulations for incident reporting.",
+                "Notify law enforcement and regulatory bodies if required.",
+                "Preserve evidence in accordance with legal standards.",
+                "Prepare documentation for potential legal actions."
+            ],
+            "checklist": {
+                "legal_review": "Pending",
+                "law_enforcement_notification": "Pending",
+                "evidence_preservation": "Pending",
+                "legal_documentation": "Pending"
+            }
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "scenario_id": "ccs_001",
+    "name": "Basic Command and Control Setup",
+    "description": "Establish a basic C2 infrastructure using HTTP for communication.",
+    "steps": [
+      {
+        "step_id": "ccs_001_step_001",
+        "description": "Deploy a web server to act as the C2 server.",
+        "action": "deploy_server",
+        "parameters": {
+          "server_type": "web",
+          "communication_protocol": "http"
+        }
+      },
+      {
+        "step_id": "ccs_001_step_002",
+        "description": "Configure the malware to communicate with the C2 server.",
+        "action": "configure_malware",
+        "parameters": {
+          "c2_server": "http://c2.example.com",
+          "check_in_interval": "30s"
+        }
+      }
+    ],
+    "expected_outcome": "Malware successfully checks in with the C2 server at the specified interval."
+  },
+  {
+    "scenario_id": "ccs_002",
+    "name": "Advanced Persistent Threat Simulation",
+    "description": "Simulate an APT group's C2 tactics using multiple channels and encrypted communication.",
+    "steps": [
+      {
+        "step_id": "ccs_002_step_001",
+        "description": "Set up a multi-protocol C2 infrastructure.",
+        "action": "setup_multi_protocol_c2",
+        "parameters": {
+          "protocols": ["http", "dns", "icmp"]
+        }
+      },
+      {
+        "step_id": "ccs_002_step_002",
+        "description": "Deploy encryption mechanisms for C2 communication.",
+        "action": "deploy_encryption",
+        "parameters": {
+          "encryption_type": "aes",
+          "key": "s3cr3tk3y"
+        }
+      },
+      {
+        "step_id": "ccs_002_step_003",
+        "description": "Configure malware with encrypted C2 communication capabilities.",
+        "action": "configure_malware_encryption",
+        "parameters": {
+          "encryption_type": "aes",
+          "key": "s3cr3tk3y"
+        }
+      }
+    ],
+    "expected_outcome": "Malware is able to communicate with the C2 server using multiple protocols with encrypted messages."
+  },
+  {
+    "scenario_id": "ccs_003",
+    "name": "Evasive Command and Control",
+    "description": "Create a C2 scenario that is designed to evade detection by blending in with normal traffic.",
+    "steps": [
+      {
+        "step_id": "ccs_003_step_001",
+        "description": "Deploy a C2 server that mimics a social media platform.",
+        "action": "deploy_mimic_server",
+        "parameters": {
+          "mimic_type": "social_media",
+          "platform": "FakeBook"
+        }
+      },
+      {
+        "step_id": "ccs_003_step_002",
+        "description": "Configure malware to use steganography for communication.",
+        "action": "configure_malware_steganography",
+        "parameters": {
+          "steganography_type": "image"
+        }
+      }
+    ],
+    "expected_outcome": "Malware communicates with the C2 server without raising suspicion, as traffic appears to be normal social media activity."
+  }
+]

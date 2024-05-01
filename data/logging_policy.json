@@ -1,0 +1,82 @@
+{
+    "loggingLevels": {
+        "DEBUG": "Lowest level: Informational messages that are typically useful to developers for debugging the application.",
+        "INFO": "General system information (startup, shutdown, configuration).",
+        "WARNING": "Indications that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.",
+        "ERROR": "Due to a more serious problem, the software has not been able to perform some function.",
+        "CRITICAL": "A serious error, indicating that the program itself may be unable to continue running."
+    },
+    "logRetentionPolicy": {
+        "DEBUG": "7 days",
+        "INFO": "30 days",
+        "WARNING": "90 days",
+        "ERROR": "1 year",
+        "CRITICAL": "Indefinite"
+    },
+    "logFormat": "timestamp levelname loggername message",
+    "logStorage": {
+        "local": {
+            "path": "/var/log/ai_security_app",
+            "rotation": "daily",
+            "compression": "gzip"
+        },
+        "remote": {
+            "enabled": true,
+            "endpoint": "https://logserver.example.com/upload",
+            "authentication": {
+                "method": "API_KEY",
+                "key": "${API_KEY}"
+            },
+            "encryption": {
+                "enabled": true,
+                "type": "AES",
+                "key": "${ENCRYPTION_KEY}"
+            }
+        }
+    },
+    "alerting": {
+        "enabled": true,
+        "channels": {
+            "email": {
+                "enabled": true,
+                "recipients": ["security@example.com"],
+                "threshold": "ERROR"
+            },
+            "sms": {
+                "enabled": false,
+                "recipients": ["+1234567890"],
+                "threshold": "CRITICAL"
+            },
+            "webhook": {
+                "enabled": true,
+                "url": "https://alertmanager.example.com/notify",
+                "threshold": "WARNING"
+            }
+        }
+    },
+    "exclusionFilters": {
+        "sensitiveData": [
+            "password",
+            "apiKey",
+            "privateKey"
+        ],
+        "redundantInfo": [
+            "ping",
+            "heartbeat"
+        ]
+    },
+    "incidentResponseLogging": {
+        "enabled": true,
+        "template": "${INCIDENT_RESPONSE_TEMPLATES}",
+        "autoLogActions": true
+    },
+    "forensicLogging": {
+        "enabled": true,
+        "artifacts": "${FORENSIC_ARTIFACTS}",
+        "preserveChainOfCustody": true
+    },
+    "complianceStandards": {
+        "enabled": true,
+        "standards": ["ISO 27001", "NIST", "GDPR"]
+    }
+}

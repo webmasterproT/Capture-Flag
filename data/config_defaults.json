@@ -1,0 +1,149 @@
+{
+    "API_KEY": "your_api_key_here",
+    "USER_PREFERENCES": {
+        "dashboard_theme": "dark",
+        "auto_update_check": true,
+        "logging_enabled": true,
+        "log_retention_days": 30,
+        "incident_response_mode": "auto",
+        "forensic_mode": "thorough"
+    },
+    "CONFIG_DEFAULTS": {
+        "network_analysis": {
+            "packet_capture_limit": 1000,
+            "traffic_analysis_mode": "real-time"
+        },
+        "forensics": {
+            "log_analysis": true,
+            "file_integrity_check": true
+        },
+        "steganography": {
+            "image_formats": ["png", "jpg", "gif"],
+            "audio_formats": ["mp3", "wav"]
+        },
+        "reverse_engineering": {
+            "binary_analysis": true,
+            "decompilation": true
+        },
+        "cryptography": {
+            "cipher_types": ["AES", "3DES", "RC4", "Twofish"],
+            "hash_algorithms": ["SHA-256", "MD5"]
+        },
+        "osint": {
+            "social_media_platforms": ["twitter", "facebook", "reddit"],
+            "public_databases": ["shodan", "censys"]
+        },
+        "exploit_development": {
+            "fuzzing": true,
+            "payload_encoding": "x64"
+        },
+        "dynamic_code_exec": {
+            "exec_function_enabled": true,
+            "code_sandboxing": true
+        },
+        "polymorphic_code_gen": {
+            "polymorphism_level": "high",
+            "runtime_obfuscation": true
+        },
+        "incident_response": {
+            "sigma_rule_integration": true,
+            "mitre_attack_mapping": true
+        },
+        "threat_modeling": {
+            "threat_model_framework": "STRIDE",
+            "automated_model_generation": true
+        },
+        "risk_analysis": {
+            "risk_assessment_method": "quantitative",
+            "risk_scoring_system": "CVSS"
+        },
+        "ctf_simulation": {
+            "scenario_difficulty": "advanced",
+            "real_world_simulation": true
+        },
+        "red_team_tools": {
+            "penetration_testing_kit": "custom",
+            "social_engineering": "enabled"
+        },
+        "ai_integration": {
+            "ai_api_endpoint": "https://api.openai.com",
+            "use_ollama": false
+        },
+        "api_interaction": {
+            "api_request_timeout": 10,
+            "api_retry_attempts": 3
+        },
+        "user_interface": {
+            "language": "English",
+            "notification_system": "integrated"
+        },
+        "update_manager": {
+            "check_frequency_days": 1,
+            "download_path": "/updates/"
+        },
+        "installer": {
+            "installation_path": "/opt/red_team_toolkit/",
+            "create_desktop_shortcut": true
+        },
+        "logging": {
+            "log_file_path": "/var/log/red_team_toolkit/",
+            "log_level": "info"
+        },
+        "debugging_tools": {
+            "debugger_path": "/usr/bin/gdb",
+            "memory_analysis": true
+        },
+        "packet_monitoring": {
+            "monitoring_mode": "stealth",
+            "alert_on_suspicious_activity": true
+        },
+        "post_mortem_report": {
+            "generate_report": true,
+            "report_format": "PDF"
+        },
+        "privilege_escalation": {
+            "techniques": ["exploit", "credential_dumping"],
+            "auto_escalate": true
+        },
+        "sql_injection": {
+            "detection_mode": "active",
+            "test_payloads": ["' OR '1'='1", "' UNION SELECT NULL--"]
+        },
+        "xss_injection": {
+            "detection_mode": "passive",
+            "encoding_types": ["URL", "HTML"]
+        },
+        "xpath_injection": {
+            "detection_mode": "active",
+            "test_payloads": ["' or ''='", "' or '1'='1'"]
+        },
+        "rce_exploit": {
+            "vulnerability_scanning": true,
+            "exploit_database_integration": true
+        },
+        "crypto_solver": {
+            "classic_ciphers": ["Caesar", "transposition"],
+            "modern_cryptography": true
+        },
+        "programming_challenges": {
+            "languages": ["Python", "C", "JavaScript"],
+            "problem_solving_mode": "auto"
+        },
+        "osint_tools": {
+            "data_aggregation": true,
+            "anonymity_level": "high"
+        },
+        "reverse_engineering_tools": {
+            "disassembler": "IDA Pro",
+            "decompiler": "Ghidra"
+        },
+        "forensic_tools": {
+            "disk_imaging": true,
+            "memory_forensics": true
+        },
+        "steganography_tools": {
+            "detection_methods": ["LSB", "FFT"],
+            "extraction_tools": ["steghide", "outguess"]
+        }
+    }
+}

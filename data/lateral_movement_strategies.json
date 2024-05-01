@@ -1,0 +1,74 @@
+[
+  {
+    "id": "lm_pass_the_hash",
+    "name": "Pass the Hash",
+    "description": "Use captured NTLM hash to authenticate as the user without the need for the plaintext password.",
+    "applicability": "Windows environments with shared credentials.",
+    "execution": [
+      "Identify systems that accept NTLM authentication.",
+      "Use tools like Mimikatz to extract hashes.",
+      "Leverage tools such as PsExec or Invoke-Mimikatz to perform pass-the-hash."
+    ],
+    "detection": "Monitor for anomalous logon patterns and lateral movement with tools like Sysmon and SIEM solutions."
+  },
+  {
+    "id": "lm_remote_services",
+    "name": "Remote Services",
+    "description": "Utilize remote services such as SSH, RDP, or VNC to move laterally across systems.",
+    "applicability": "Networks with remote services enabled and accessible.",
+    "execution": [
+      "Obtain credentials through phishing, keylogging, or credential dumping.",
+      "Connect to the target system using the obtained credentials.",
+      "Establish persistence through service creation or scheduled tasks."
+    ],
+    "detection": "Monitor for new remote connections and analyze logs for suspicious activity."
+  },
+  {
+    "id": "lm_exploitation_of_vulnerability",
+    "name": "Exploitation of Vulnerability",
+    "description": "Exploit known vulnerabilities in software or protocols to gain access to resources.",
+    "applicability": "Systems with unpatched software or misconfigurations.",
+    "execution": [
+      "Scan for vulnerable systems using tools like Nmap or Nessus.",
+      "Develop or obtain an exploit for the identified vulnerability.",
+      "Execute the exploit to gain access or escalate privileges."
+    ],
+    "detection": "Implement vulnerability scanning and patch management strategies. Use IDS/IPS to detect exploit attempts."
+  },
+  {
+    "id": "lm_application_shimming",
+    "name": "Application Shimming",
+    "description": "Leverage the Windows Application Compatibility Toolkit to execute code on system startup.",
+    "applicability": "Windows systems with legacy compatibility requirements.",
+    "execution": [
+      "Create a shim database with malicious payload.",
+      "Install the shim database on the target system.",
+      "The payload executes when the associated application starts."
+    ],
+    "detection": "Monitor for changes to shim databases and unusual application behavior."
+  },
+  {
+    "id": "lm_taint_shared_content",
+    "name": "Taint Shared Content",
+    "description": "Modify shared content to compromise systems that access it.",
+    "applicability": "Networks with shared directories or development environments.",
+    "execution": [
+      "Identify shared resources accessible by the target.",
+      "Inject malicious code into shared files or repositories.",
+      "Wait for the target to execute the tainted content."
+    ],
+    "detection": "Use file integrity monitoring and access controls on shared resources."
+  },
+  {
+    "id": "lm_use_of_admin_tools",
+    "name": "Use of Admin Tools",
+    "description": "Use legitimate administrative tools to move laterally and execute commands.",
+    "applicability": "Networks where administrative tools are available and permitted.",
+    "execution": [
+      "Gain access to an account with administrative privileges.",
+      "Use tools like PsExec, WinRM, or PowerShell for lateral movement.",
+      "Execute commands or deploy payloads using these tools."
+    ],
+    "detection": "Monitor and whitelist administrative tool usage. Analyze behavior patterns for anomalies."
+  }
+]

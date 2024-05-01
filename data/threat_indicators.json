@@ -1,0 +1,74 @@
+{
+    "indicators": [
+        {
+            "type": "ip",
+            "value": "192.168.1.1",
+            "description": "Suspected C2 server IP address"
+        },
+        {
+            "type": "domain",
+            "value": "malicious-example.com",
+            "description": "Domain associated with phishing attacks"
+        },
+        {
+            "type": "hash",
+            "value": "d41d8cd98f00b204e9800998ecf8427e",
+            "description": "MD5 hash of known malware file"
+        },
+        {
+            "type": "url",
+            "value": "http://malicious-example.com/login",
+            "description": "URL used for credential harvesting"
+        },
+        {
+            "type": "email",
+            "value": "phish@malicious-example.com",
+            "description": "Email address used in spear-phishing campaigns"
+        },
+        {
+            "type": "file_path",
+            "value": "/etc/passwd",
+            "description": "Sensitive file commonly targeted for exfiltration"
+        },
+        {
+            "type": "registry_key",
+            "value": "HKEY_LOCAL_MACHINE\\Software\\MaliciousSoftware",
+            "description": "Registry key created by malware"
+        },
+        {
+            "type": "string",
+            "value": "cmd.exe /c",
+            "description": "Command string indicative of remote code execution attempt"
+        },
+        {
+            "type": "user_agent",
+            "value": "Mozilla/5.0 (compatible; EvilBot/2.1; +http://malicious-example.com/bot.html)",
+            "description": "User agent string associated with malicious web crawler"
+        },
+        {
+            "type": "certificate_fingerprint",
+            "value": "9d8477dcb20e0ac0e3ce9b59af2df5c9",
+            "description": "SSL certificate fingerprint known to be used by threat actors"
+        },
+        {
+            "type": "behavioral",
+            "value": "Excessive login failures",
+            "description": "Multiple failed login attempts may indicate a brute force attack"
+        },
+        {
+            "type": "anomaly",
+            "value": "Unusual outbound traffic",
+            "description": "Sudden spike in data exfiltration to an external IP"
+        },
+        {
+            "type": "mitre_technique",
+            "value": "T1190",
+            "description": "Exploit Public-Facing Application - MITRE ATT&CK technique"
+        },
+        {
+            "type": "sigma_rule",
+            "value": "sigma/rules/windows/builtin/win_suspicious_remote_thread.yml",
+            "description": "Sigma rule for detecting suspicious remote thread creation"
+        }
+    ]
+}

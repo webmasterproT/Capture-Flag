@@ -1,0 +1,94 @@
+{
+    "ctf_scenarios": [
+        {
+            "scenario_id": "scenario_001",
+            "name": "Capture the Flag Basic",
+            "description": "A basic CTF scenario involving common web vulnerabilities such as SQLi and XSS.",
+            "objectives": [
+                {
+                    "objective_id": "obj_001",
+                    "description": "Exploit SQL injection vulnerability to access the database.",
+                    "tools": ["sqlmap", "manual_payloads"],
+                    "success_criteria": "Database access is obtained."
+                },
+                {
+                    "objective_id": "obj_002",
+                    "description": "Perform cross-site scripting (XSS) to execute a payload in the context of the web application.",
+                    "tools": ["xss_payloads", "browser_dev_tools"],
+                    "success_criteria": "Payload execution is confirmed."
+                }
+            ],
+            "difficulty": "Easy",
+            "environment": {
+                "operating_system": "Linux",
+                "services": ["Web Server", "Database Server"],
+                "protections": ["Basic WAF"]
+            },
+            "success_indicator": "Flag is captured."
+        },
+        {
+            "scenario_id": "scenario_002",
+            "name": "Advanced Persistent Threat Simulation",
+            "description": "Simulate an APT attack on a network to test incident response and threat hunting capabilities.",
+            "objectives": [
+                {
+                    "objective_id": "obj_003",
+                    "description": "Gain initial access through a phishing campaign.",
+                    "tools": ["email_spoofing_tools", "malware_delivery"],
+                    "success_criteria": "Initial foothold in the network is established."
+                },
+                {
+                    "objective_id": "obj_004",
+                    "description": "Establish command and control communication.",
+                    "tools": ["c2_frameworks", "traffic_encryption"],
+                    "success_criteria": "Stable C2 channel is set up."
+                },
+                {
+                    "objective_id": "obj_005",
+                    "description": "Move laterally to high-value targets.",
+                    "tools": ["lateral_movement_techniques", "privilege_escalation_exploits"],
+                    "success_criteria": "Access to high-value systems is obtained."
+                },
+                {
+                    "objective_id": "obj_006",
+                    "description": "Exfiltrate sensitive data without being detected.",
+                    "tools": ["data_exfiltration_methods", "covert_channels"],
+                    "success_criteria": "Sensitive data is exfiltrated and confirmed."
+                }
+            ],
+            "difficulty": "Hard",
+            "environment": {
+                "operating_system": "Windows",
+                "services": ["Active Directory", "Email Server", "File Server"],
+                "protections": ["Advanced EDR", "SIEM", "Anomaly Detection"]
+            },
+            "success_indicator": "Data is exfiltrated and C2 remains undetected."
+        },
+        {
+            "scenario_id": "scenario_003",
+            "name": "Critical Infrastructure Protection",
+            "description": "Test the resilience of critical infrastructure against cyber-physical attacks.",
+            "objectives": [
+                {
+                    "objective_id": "obj_007",
+                    "description": "Infiltrate the SCADA system network.",
+                    "tools": ["ics_exploits", "network_scanning"],
+                    "success_criteria": "Access to SCADA network is achieved."
+                },
+                {
+                    "objective_id": "obj_008",
+                    "description": "Manipulate control system to cause a service disruption.",
+                    "tools": ["plc_programming", "modbus_tampering"],
+                    "success_criteria": "Control system is manipulated successfully."
+                }
+            ],
+            "difficulty": "Expert",
+            "environment": {
+                "operating_system": "Real-time OS",
+                "services": ["SCADA", "PLC"],
+                "protections": ["Network Segmentation", "Firewalls", "Anomaly Detection Systems"]
+            },
+            "success_indicator": "Service disruption is caused without detection."
+        }
+    ]
+}
