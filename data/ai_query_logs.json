@@ -1,0 +1,61 @@
+{
+    "ai_query_logs": [
+        {
+            "timestamp": "2023-04-01T12:00:00Z",
+            "user_id": "user-123",
+            "query": "Generate polymorphic code for privilege escalation",
+            "response": "Polymorphic code snippet for privilege escalation generated successfully.",
+            "status": "success",
+            "ai_model": "Ollama",
+            "api_key_used": "API_KEY",
+            "operational_parameters": {
+                "target_system": "Linux",
+                "privilege_level_required": "root",
+                "evasion_techniques": ["obfuscation", "encryption"],
+                "execution_persistence": true
+            },
+            "outcome": {
+                "code_executed": true,
+                "privilege_escalated": true,
+                "detection_evaded": true
+            }
+        },
+        {
+            "timestamp": "2023-04-01T12:05:00Z",
+            "user_id": "user-456",
+            "query": "Analyze network traffic for anomalies",
+            "response": "Network traffic analysis completed. Anomalies detected and logged.",
+            "status": "success",
+            "ai_model": "Ollama",
+            "api_key_used": "API_KEY",
+            "operational_parameters": {
+                "network_interface": "eth0",
+                "traffic_type": "inbound",
+                "anomaly_detection_model": "machine_learning"
+            },
+            "outcome": {
+                "anomalies_detected": 3,
+                "threat_level": "moderate",
+                "response_triggered": "alert_raised"
+            }
+        },
+        {
+            "timestamp": "2023-04-01T12:10:00Z",
+            "user_id": "user-789",
+            "query": "Perform digital forensics on compromised host",
+            "response": "Forensic analysis initiated on host ID: host-321.",
+            "status": "in_progress",
+            "ai_model": "Ollama",
+            "api_key_used": "API_KEY",
+            "operational_parameters": {
+                "host_identifier": "host-321",
+                "forensic_tools_used": ["memory_dump", "file_system_analysis"],
+                "data_acquisition_method": "live_response"
+            },
+            "outcome": {
+                "forensic_data_collected": true,
+                "compromise_vector_identified": false
+            }
+        }
+    ]
+}

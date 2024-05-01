@@ -1,0 +1,87 @@
+{
+    "initial_access": [
+        "Identify entry points for gaining initial access to target systems.",
+        "Generate prompts for social engineering attacks to obtain credentials.",
+        "Craft phishing email templates to deploy spear-phishing campaigns."
+    ],
+    "command_and_control": [
+        "Establish secure communication channels with compromised systems.",
+        "Develop prompts for exfiltrating data without detection.",
+        "Create instructions for maintaining persistent access to targets."
+    ],
+    "discovery": [
+        "Formulate queries to map out the target network's topology.",
+        "Construct prompts to identify valuable assets within the network.",
+        "Generate tasks for enumerating services running on target machines."
+    ],
+    "credential_access": [
+        "Devise prompts for extracting credentials from memory dumps.",
+        "Create strategies for privilege escalation through credential misuse.",
+        "Instruct on methods for capturing keystrokes to obtain passwords."
+    ],
+    "lateral_movement": [
+        "Design scenarios for moving laterally across the network.",
+        "Prompt for techniques to exploit trust relationships between systems.",
+        "Outline steps for using valid accounts to access other systems."
+    ],
+    "privilege_escalation": [
+        "Generate prompts for exploiting system vulnerabilities to gain higher privileges.",
+        "Develop methods for bypassing User Account Control (UAC) on Windows systems.",
+        "Create instructions for kernel exploitation leading to root access."
+    ],
+    "defense_evasion": [
+        "Craft prompts for creating polymorphic code to evade antivirus detection.",
+        "Instruct on obfuscating command and control traffic.",
+        "Generate methods for disabling security tools and services."
+    ],
+    "persistence": [
+        "Formulate prompts for establishing mechanisms that maintain access to targets.",
+        "Develop strategies for creating and hiding backdoors in systems.",
+        "Create tasks for auto-starting malware after system reboots."
+    ],
+    "exfiltration": [
+        "Devise prompts for packaging and transferring data out of the network.",
+        "Generate scenarios for stealthy data exfiltration over time.",
+        "Outline methods for encrypting data prior to exfiltration to avoid detection."
+    ],
+    "impact": [
+        "Construct prompts for executing denial of service attacks.",
+        "Create instructions for data destruction without recovery.",
+        "Develop strategies for manipulating data integrity to undermine trust."
+    ],
+    "forensics": [
+        "Generate prompts for analyzing logs to trace attacker activities.",
+        "Develop queries for uncovering artifacts from memory and disk.",
+        "Craft tasks for reconstructing events post-compromise."
+    ],
+    "red_team_tools": [
+        "Prompt for custom tool development to fit specific campaign requirements.",
+        "Generate instructions for using open-source penetration testing tools.",
+        "Create scenarios for testing and improving red team toolkits."
+    ],
+    "ai_integration": [
+        "Develop prompts for AI to suggest novel attack vectors.",
+        "Generate methods for AI-assisted code generation and execution.",
+        "Craft tasks for AI to analyze and predict defensive responses."
+    ],
+    "threat_modeling": [
+        "Formulate prompts for identifying potential threats and vulnerabilities.",
+        "Create tasks for simulating adversary behaviors and tactics.",
+        "Develop scenarios for assessing the impact of various attack vectors."
+    ],
+    "risk_analysis": [
+        "Generate prompts for evaluating the risk posture of a target environment.",
+        "Develop methods for quantifying the potential impact of security breaches.",
+        "Craft strategies for prioritizing targets based on risk assessment."
+    ],
+    "incident_response": [
+        "Prompt for creating incident response playbooks.",
+        "Generate tasks for simulating incident response scenarios.",
+        "Develop methods for AI to assist in real-time during incident handling."
+    ],
+    "capture_the_flag": [
+        "Create prompts for AI to strategize winning CTF competitions.",
+        "Generate scenarios that simulate real-world cyber attack and defense.",
+        "Develop tasks for AI to dynamically adapt to CTF challenges."
+    ]
+}

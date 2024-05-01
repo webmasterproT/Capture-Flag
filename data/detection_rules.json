@@ -1,0 +1,92 @@
+{
+    "detection_rules": [
+        {
+            "id": "DR001",
+            "name": "Endpoint Protection Evasion",
+            "description": "Detects attempts to bypass or disable endpoint protection systems.",
+            "indicators": [
+                "Unexpected changes in system files or configurations",
+                "Suspicious process behavior indicative of a kill chain",
+                "Attempts to modify or delete security-related registry keys"
+            ],
+            "response": "Trigger immediate investigation and isolate affected endpoint."
+        },
+        {
+            "id": "DR002",
+            "name": "Web Gateway Anomaly",
+            "description": "Identifies unusual traffic patterns or requests that may indicate an attempt to exploit web gateways.",
+            "indicators": [
+                "Anomalous volumes of data transfer",
+                "Unusual request methods or patterns",
+                "Detection of known malicious user agents or referrers"
+            ],
+            "response": "Alert network security team and initiate traffic analysis."
+        },
+        {
+            "id": "DR003",
+            "name": "Firewall Configuration Tampering",
+            "description": "Monitors for unauthorized changes to firewall rules that could expose the network to external threats.",
+            "indicators": [
+                "Unauthorized access to firewall configuration interfaces",
+                "Changes to firewall rules without corresponding change management tickets",
+                "Disabling of firewall logging features"
+            ],
+            "response": "Revert changes, review access controls, and audit for further suspicious activity."
+        },
+        {
+            "id": "DR004",
+            "name": "Intrusion Detection System Evasion",
+            "description": "Detects attempts to evade or disable intrusion detection systems.",
+            "indicators": [
+                "Traffic fragmentation or packet payload obfuscation",
+                "Use of encryption to bypass content inspection",
+                "Anomalies in traffic timing or volume that may indicate a scan or attack"
+            ],
+            "response": "Adjust IDS settings, increase monitoring, and investigate network traffic."
+        },
+        {
+            "id": "DR005",
+            "name": "Privilege Escalation Detection",
+            "description": "Identifies attempts to gain higher-level permissions on a system or network illegitimately.",
+            "indicators": [
+                "Attempts to access administrative tools or commands without proper authorization",
+                "Unusual system calls or access patterns that may indicate a privilege escalation attempt",
+                "Modification of user account privileges or creation of new administrative accounts"
+            ],
+            "response": "Lock down affected accounts, investigate system logs, and remediate vulnerabilities."
+        },
+        {
+            "id": "DR006",
+            "name": "Malicious Code Execution",
+            "description": "Detects the execution of unauthorized or malicious code on a system.",
+            "indicators": [
+                "Execution of code from untrusted or unusual locations",
+                "Creation of new, unexpected processes",
+                "Attempts to access or modify protected system memory areas"
+            ],
+            "response": "Terminate malicious processes, isolate affected systems, and begin forensic analysis."
+        },
+        {
+            "id": "DR007",
+            "name": "Anomalous Network Traffic",
+            "description": "Detects network traffic patterns that deviate from the established baseline and may indicate reconnaissance or data exfiltration.",
+            "indicators": [
+                "Unusual outbound traffic to known bad destinations",
+                "Significant deviations from normal bandwidth usage",
+                "Repeated connections to the same external IP addresses"
+            ],
+            "response": "Investigate connections, apply network segmentation, and update access control lists."
+        },
+        {
+            "id": "DR008",
+            "name": "Suspicious Login Activity",
+            "description": "Monitors for login attempts that may indicate a brute force or credential stuffing attack.",
+            "indicators": [
+                "Multiple failed login attempts from a single IP address",
+                "Logins at unusual times or from unusual locations",
+                "Successful logins followed by unusual system or network activity"
+            ],
+            "response": "Enforce account lockout policies, alert affected users, and monitor for further suspicious activity."
+        }
+    ]
+}

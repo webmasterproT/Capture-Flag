@@ -1,0 +1,56 @@
+{
+  "manifest_version": "1.0.0",
+  "application_name": "Advanced Security Operations Program",
+  "last_update_check": "2023-04-01T00:00:00Z",
+  "update_url": "https://updates.security-operations.com/latest",
+  "current_version": {
+    "version": "1.0.0",
+    "release_date": "2023-04-01T00:00:00Z",
+    "changelog": "Initial release with full functionality for government security needs."
+  },
+  "available_updates": [],
+  "update_check_interval": "24h",
+  "auto_update_enabled": true,
+  "update_priority": "high",
+  "update_packages": [
+    {
+      "name": "main.py",
+      "version": "1.0.0",
+      "url": "https://updates.security-operations.com/packages/main-1.0.0.py",
+      "checksum": "sha256:examplechecksum"
+    },
+    {
+      "name": "network_analysis.py",
+      "version": "1.0.0",
+      "url": "https://updates.security-operations.com/packages/network_analysis-1.0.0.py",
+      "checksum": "sha256:examplechecksum"
+    },
+    {
+      "name": "forensics.py",
+      "version": "1.0.0",
+      "url": "https://updates.security-operations.com/packages/forensics-1.0.0.py",
+      "checksum": "sha256:examplechecksum"
+    }
+    // Additional update package entries would follow the same structure
+  ],
+  "dependencies": {
+    "python": ">=3.8",
+    "external_libraries": [
+      {
+        "name": "requests",
+        "version": ">=2.25.1"
+      },
+      {
+        "name": "flask",
+        "version": ">=1.1.2"
+      }
+      // Additional dependencies would be listed here
+    ]
+  },
+  "supported_platforms": ["Windows", "macOS", "Linux"],
+  "installation_instructions_url": "https://updates.security-operations.com/documentation/installation_guide.md",
+  "user_guide_url": "https://updates.security-operations.com/documentation/user_guide.md",
+  "technical_specifications_url": "https://updates.security-operations.com/documentation/technical_specifications.md",
+  "maintenance_guide_url": "https://updates.security-operations.com/documentation/maintenance_guide.md",
+  "update_instructions_url": "https://updates.security-operations.com/documentation/update_instructions.md"
+}

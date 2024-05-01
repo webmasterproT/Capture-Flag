@@ -1,0 +1,101 @@
+{
+    "integrity_checks": [
+        {
+            "name": "System File Verification",
+            "description": "Verifies the integrity of system files against known good hashes.",
+            "method": "hash_comparison",
+            "parameters": {
+                "hash_type": "SHA256",
+                "known_good_hashes": "data/known_good_hashes.json"
+            }
+        },
+        {
+            "name": "Critical Service Monitoring",
+            "description": "Monitors critical services to ensure they are running and have not been tampered with.",
+            "method": "service_monitoring",
+            "parameters": {
+                "critical_services": [
+                    "firewall",
+                    "antivirus",
+                    "ids",
+                    "ips"
+                ]
+            }
+        },
+        {
+            "name": "Unauthorized Port Scan",
+            "description": "Scans for unauthorized open ports that could indicate a breach.",
+            "method": "port_scan",
+            "parameters": {
+                "allowed_ports": "data/allowed_ports.json"
+            }
+        },
+        {
+            "name": "Log Anomaly Detection",
+            "description": "Analyzes logs for anomalies that could indicate malicious activity.",
+            "method": "log_analysis",
+            "parameters": {
+                "log_sources": [
+                    "/var/log/auth.log",
+                    "/var/log/syslog"
+                ],
+                "anomaly_detection_model": "data/anomaly_detection_model.json"
+            }
+        },
+        {
+            "name": "Rootkit Detection",
+            "description": "Searches for signs of rootkits on the system.",
+            "method": "rootkit_scan",
+            "parameters": {
+                "scan_tools": [
+                    "chkrootkit",
+                    "rkhunter"
+                ]
+            }
+        },
+        {
+            "name": "Network Traffic Baseline",
+            "description": "Establishes a baseline of normal network traffic and alerts on deviations.",
+            "method": "traffic_baseline",
+            "parameters": {
+                "baseline_profile": "data/network_baseline.json"
+            }
+        },
+        {
+            "name": "User Behavior Analytics",
+            "description": "Monitors user behavior for actions outside of normal patterns.",
+            "method": "user_behavior",
+            "parameters": {
+                "behavioral_model": "data/user_behavioral_model.json"
+            }
+        },
+        {
+            "name": "File System Protection",
+            "description": "Monitors file system for unauthorized changes.",
+            "method": "file_system_monitoring",
+            "parameters": {
+                "protected_directories": [
+                    "/etc",
+                    "/usr/bin",
+                    "/usr/sbin"
+                ]
+            }
+        },
+        {
+            "name": "Privilege Escalation Detection",
+            "description": "Detects attempts to escalate privileges beyond normal usage patterns.",
+            "method": "privilege_escalation_detection",
+            "parameters": {
+                "escalation_patterns": "data/privilege_escalation_patterns.json"
+            }
+        },
+        {
+            "name": "Executable Whitelisting",
+            "description": "Ensures only whitelisted executables are allowed to run.",
+            "method": "executable_whitelisting",
+            "parameters": {
+                "whitelist": "data/executable_whitelist.json"
+            }
+        }
+    ]
+}

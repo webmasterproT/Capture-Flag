@@ -1,0 +1,62 @@
+[
+  {
+    "id": "RA-001",
+    "title": "Risk Analysis for Endpoint Protection Gaps",
+    "date": "2023-04-01",
+    "risk_score": 85,
+    "mitre_attack_techniques": ["T1562.001", "T1562.004"],
+    "kill_chain_phase": "Defense Evasion",
+    "description": "Analysis of endpoint protection reveals potential gaps in antivirus and anti-malware defenses, allowing for possible exploitation and persistence.",
+    "recommendations": [
+      "Update endpoint protection software to the latest version.",
+      "Conduct regular scans for indicators of compromise.",
+      "Implement application whitelisting."
+    ],
+    "status": "Open"
+  },
+  {
+    "id": "RA-002",
+    "title": "Risk Analysis for Email Gateway Security",
+    "date": "2023-04-02",
+    "risk_score": 78,
+    "mitre_attack_techniques": ["T1566.001", "T1566.002", "T1566.003"],
+    "kill_chain_phase": "Initial Access",
+    "description": "Email gateways lack sufficient filtering rules, increasing the risk of phishing and spear-phishing attacks.",
+    "recommendations": [
+      "Enhance email filtering rules to identify and block malicious attachments and links.",
+      "Implement DMARC, DKIM, and SPF to reduce spoofing.",
+      "Train employees on recognizing phishing attempts."
+    ],
+    "status": "Open"
+  },
+  {
+    "id": "RA-003",
+    "title": "Risk Analysis for Firewall Configuration Weaknesses",
+    "date": "2023-04-03",
+    "risk_score": 90,
+    "mitre_attack_techniques": ["T1599"],
+    "kill_chain_phase": "Discovery",
+    "description": "Firewall configurations are not optimized, potentially allowing unauthorized access to internal network resources.",
+    "recommendations": [
+      "Review and update firewall rules to ensure only necessary ports and services are exposed.",
+      "Regularly audit firewall configurations for compliance with security policies.",
+      "Implement network segmentation to limit lateral movement."
+    ],
+    "status": "Open"
+  },
+  {
+    "id": "RA-004",
+    "title": "Risk Analysis for Intrusion Detection System Evasion",
+    "date": "2023-04-04",
+    "risk_score": 95,
+    "mitre_attack_techniques": ["T1027", "T1071", "T1090"],
+    "kill_chain_phase": "Command and Control",
+    "description": "Current intrusion detection systems may be evaded by advanced persistent threats using encryption and tunneling techniques.",
+    "recommendations": [
+      "Implement network traffic analysis tools capable of decrypting and inspecting encrypted traffic.",
+      "Update IDS signatures and heuristic rules to detect anomalous patterns.",
+      "Conduct regular red team exercises to test the effectiveness of the IDS."
+    ],
+    "status": "Open"
+  }
+]

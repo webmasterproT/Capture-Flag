@@ -1,0 +1,51 @@
+{
+    "detection_logs": [
+        {
+            "timestamp": "2023-04-01T12:00:00Z",
+            "event_type": "anomaly_detected",
+            "description": "Unusual traffic pattern observed",
+            "source_ip": "192.168.1.100",
+            "destination_ip": "10.10.10.10",
+            "protocol": "TCP",
+            "port": 443,
+            "payload": "Encrypted",
+            "action_taken": "Logged and flagged for review",
+            "status": "Pending investigation",
+            "incident_id": "INC0012345"
+        },
+        {
+            "timestamp": "2023-04-01T12:05:00Z",
+            "event_type": "signature_match",
+            "description": "Known exploit signature detected",
+            "source_ip": "192.168.1.101",
+            "destination_ip": "10.10.20.20",
+            "protocol": "UDP",
+            "port": 53,
+            "payload": "N/A",
+            "action_taken": "Blocked and alerted SOC",
+            "status": "Mitigated",
+            "incident_id": "INC0012346",
+            "related_indicators": [
+                "EXPLOIT_CVE_2023_XXXX",
+                "ANOMALOUS_DOMAIN_REQUESTS"
+            ]
+        },
+        {
+            "timestamp": "2023-04-01T12:10:00Z",
+            "event_type": "policy_violation",
+            "description": "Unauthorized data exfiltration attempt",
+            "source_ip": "192.168.1.102",
+            "destination_ip": "23.45.67.89",
+            "protocol": "HTTPS",
+            "port": 443,
+            "payload": "Sensitive document leak",
+            "action_taken": "Terminated session and quarantined host",
+            "status": "Under forensic analysis",
+            "incident_id": "INC0012347",
+            "affected_assets": [
+                "HR_Database",
+                "Employee_PII"
+            ]
+        }
+    ]
+}

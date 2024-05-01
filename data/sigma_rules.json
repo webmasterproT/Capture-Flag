@@ -1,0 +1,92 @@
+{
+    "sigma_rules": [
+        {
+            "id": "SR001",
+            "title": "Unauthorized Access Attempt",
+            "description": "Detects multiple failed login attempts which may indicate a brute force attack.",
+            "logsource": {
+                "category": "authentication",
+                "product": "any"
+            },
+            "detection": {
+                "selection": {
+                    "type": "Authentication Failure",
+                    "count": "> 5",
+                    "timeframe": "last 10m"
+                },
+                "condition": "selection"
+            },
+            "level": "high"
+        },
+        {
+            "id": "SR002",
+            "title": "Suspicious Process Creation",
+            "description": "Detects the creation of a process that is commonly used by attackers for lateral movement or persistence.",
+            "logsource": {
+                "category": "process_creation",
+                "product": "any"
+            },
+            "detection": {
+                "selection": {
+                    "process": "powershell.exe",
+                    "commandline": {
+                        "contains": "EncodedCommand"
+                    }
+                },
+                "condition": "selection"
+            },
+            "level": "medium"
+        },
+        {
+            "id": "SR003",
+            "title": "Anomalous Network Activity",
+            "description": "Detects unusual outbound network traffic which could indicate data exfiltration or command and control communication.",
+            "logsource": {
+                "category": "network",
+                "product": "any"
+            },
+            "detection": {
+                "selection": {
+                    "dest_port": "!known_good_ports",
+                    "bytes_out": "> 1000000"
+                },
+                "condition": "selection"
+            },
+            "level": "medium"
+        },
+        {
+            "id": "SR004",
+            "title": "Potential Privilege Escalation",
+            "description": "Detects attempts to escalate privileges which may indicate an active attack on the system.",
+            "logsource": {
+                "category": "authentication",
+                "product": "any"
+            },
+            "detection": {
+                "selection": {
+                    "type": "Privilege Escalation",
+                    "status": "success"
+                },
+                "condition": "selection"
+            },
+            "level": "critical"
+        },
+        {
+            "id": "SR005",
+            "title": "Suspicious File Access",
+            "description": "Detects access to sensitive files which may indicate data theft or tampering.",
+            "logsource": {
+                "category": "file_access",
+                "product": "any"
+            },
+            "detection": {
+                "selection": {
+                    "file_path": "sensitive_file_paths",
+                    "access_type": "write"
+                },
+                "condition": "selection"
+            },
+            "level": "high"
+        }
+    ]
+}

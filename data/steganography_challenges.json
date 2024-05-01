@@ -1,0 +1,77 @@
+[
+    {
+        "id": "steg-challenge-001",
+        "description": "Basic image steganography challenge",
+        "file": "basic_steg_image.png",
+        "hints": [
+            "Look for unusually high LSB values",
+            "Consider common steganography tools"
+        ],
+        "solution": "hidden_message.txt",
+        "tools": [
+            "steghide",
+            "zsteg"
+        ],
+        "difficulty": "easy"
+    },
+    {
+        "id": "steg-challenge-002",
+        "description": "Audio steganography challenge",
+        "file": "encoded_message.wav",
+        "hints": [
+            "Spectrogram analysis may reveal hidden patterns",
+            "Listen for non-audible frequencies"
+        ],
+        "solution": "secret_code.txt",
+        "tools": [
+            "Audacity",
+            "Sonic Visualiser"
+        ],
+        "difficulty": "medium"
+    },
+    {
+        "id": "steg-challenge-003",
+        "description": "Advanced image steganography with encryption",
+        "file": "encrypted_steg_image.bmp",
+        "hints": [
+            "The image contains an encrypted payload",
+            "Use a combination of steganography and cryptography tools"
+        ],
+        "solution": "decrypted_payload.txt",
+        "tools": [
+            "stegcracker",
+            "openssl"
+        ],
+        "difficulty": "hard"
+    },
+    {
+        "id": "steg-challenge-004",
+        "description": "Network steganography challenge",
+        "file": "network_capture.pcap",
+        "hints": [
+            "Analyze packet timings",
+            "Look for data hidden in header fields"
+        ],
+        "solution": "extracted_data.txt",
+        "tools": [
+            "Wireshark",
+            "Scapy"
+        ],
+        "difficulty": "expert"
+    },
+    {
+        "id": "steg-challenge-005",
+        "description": "Video steganography challenge",
+        "file": "hidden_in_video.mp4",
+        "hints": [
+            "Frame-by-frame analysis may be necessary",
+            "Check for anomalies in video and audio streams"
+        ],
+        "solution": "uncovered_message.txt",
+        "tools": [
+            "ffmpeg",
+            "OpenCV"
+        ],
+        "difficulty": "medium"
+    }
+]

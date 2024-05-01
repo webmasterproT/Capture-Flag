@@ -1,0 +1,54 @@
+{
+    "forensic_investigation_reports": [
+        {
+            "report_id": "FR-20230101-0001",
+            "investigation_type": "Network Traffic Analysis",
+            "date_time": "2023-01-01T10:00:00Z",
+            "investigator": "Agent Smith",
+            "summary": "Analysis of suspicious outbound traffic patterns from internal server.",
+            "findings": {
+                "anomalous_activity_detected": true,
+                "traffic_destination": "192.168.1.100",
+                "data_exfiltration": true,
+                "malware_signature": "Trojan:Win32/Example",
+                "suspicious_processes": [
+                    "unknown_process.exe",
+                    "malicious_service.exe"
+                ],
+                "recommendations": "Isolate affected server, initiate incident response protocol, and update firewall rules."
+            },
+            "actions_taken": [
+                "Server isolated",
+                "Incident response team notified",
+                "Firewall rules updated"
+            ],
+            "status": "Ongoing"
+        },
+        {
+            "report_id": "FR-20230102-0002",
+            "investigation_type": "Digital Forensics",
+            "date_time": "2023-01-02T15:30:00Z",
+            "investigator": "Agent Johnson",
+            "summary": "Forensic analysis of a compromised workstation.",
+            "findings": {
+                "rootkit_detected": true,
+                "compromised_user_accounts": [
+                    "user1",
+                    "admin"
+                ],
+                "data_accessed": [
+                    "confidential_report.docx",
+                    "financials.xlsx"
+                ],
+                "recommendations": "Perform system wipe and restore from clean backup, reset compromised user credentials, and conduct security awareness training."
+            },
+            "actions_taken": [
+                "System wiped",
+                "Backup restored",
+                "User credentials reset",
+                "Security training scheduled"
+            ],
+            "status": "Resolved"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "attack_simulation_results": [
+        {
+            "scenario_id": "CTF001",
+            "scenario_description": "Capture the flag scenario simulating an attack on a secure data facility.",
+            "objectives": [
+                "Initial Access",
+                "Command & Control",
+                "Discovery",
+                "Credential Access",
+                "Lateral Movement",
+                "Privilege Escalation"
+            ],
+            "success": true,
+            "techniques_used": [
+                "Phishing",
+                "Malware",
+                "Password Spraying",
+                "Exploitation of Public-Facing Application",
+                "Internal Spearphishing",
+                "Pass the Hash"
+            ],
+            "tools_used": [
+                "Custom Polymorphic Malware",
+                "AI-Generated Exploit Code",
+                "Encrypted C2 Communications",
+                "Privilege Escalation Scripts"
+            ],
+            "ai_assistance": true,
+            "dynamic_code_execution": true,
+            "polymorphic_code_generation": true,
+            "time_taken": "00:15:23",
+            "date": "2023-04-05T14:30:00Z",
+            "post_mortem_analysis": "data/post_mortem_templates.json",
+            "user_defined_goals": "data/user_defined_goals.json",
+            "operational_parameters": "data/operational_parameters.json",
+            "incident_response_triggered": false,
+            "detection_avoided": true,
+            "mitre_attack_techniques": [
+                "T1566.001",
+                "T1566.002",
+                "T1110.001",
+                "T1190",
+                "T1534",
+                "T1075"
+            ],
+            "sigma_rule_alerts": [],
+            "log_entries": "data/user_activity_logs.json",
+            "system_integrity_checks": "data/system_integrity_checks.json"
+        },
+        {
+            "scenario_id": "CTF002",
+            "scenario_description": "Red team exercise targeting a mock critical infrastructure control system.",
+            "objectives": [
+                "Initial Access",
+                "Discovery",
+                "Credential Access",
+                "Lateral Movement",
+                "Privilege Escalation",
+                "Data Exfiltration"
+            ],
+            "success": true,
+            "techniques_used": [
+                "Supply Chain Compromise",
+                "Zero-Day Exploit",
+                "Kerberoasting",
+                "Remote Services",
+                "Data Staged",
+                "Exfiltration Over C2 Channel"
+            ],
+            "tools_used": [
+                "AI-Generated Zero-Day Exploit",
+                "Custom Steganography Tools",
+                "Data Exfiltration Malware"
+            ],
+            "ai_assistance": true,
+            "dynamic_code_execution": true,
+            "polymorphic_code_generation": true,
+            "time_taken": "00:45:10",
+            "date": "2023-04-12T09:20:00Z",
+            "post_mortem_analysis": "data/post_mortem_templates.json",
+            "user_defined_goals": "data/user_defined_goals.json",
+            "operational_parameters": "data/operational_parameters.json",
+            "incident_response_triggered": true,
+            "detection_avoided": false,
+            "mitre_attack_techniques": [
+                "T1195",
+                "T1068",
+                "T1208",
+                "T1021",
+                "T1074",
+                "T1041"
+            ],
+            "sigma_rule_alerts": [
+                "Possible Kerberoasting Activity Detected",
+                "Unusual Outbound Network Traffic"
+            ],
+            "log_entries": "data/user_activity_logs.json",
+            "system_integrity_checks": "data/system_integrity_checks.json"
+        }
+    ]
+}

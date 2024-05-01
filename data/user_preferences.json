@@ -1,0 +1,74 @@
+{
+    "api_key": "REPLACE_WITH_YOUR_API_KEY",
+    "user_defined_goals": {
+        "red_team_success_rate": 100,
+        "scenario_simulation_accuracy": "high",
+        "invisibility_requirement": true,
+        "dynamic_code_execution": true,
+        "polymorphic_code_adaptation": true
+    },
+    "operational_parameters": {
+        "bypass_cyber_security_operations": true,
+        "rapid_assessment_of_cyber_abilities": true,
+        "continuous_evaluation_of_controls": true,
+        "end_to_end_logging_and_detection": true,
+        "actionable_guidance_on_policies_and_sigma_rules": true,
+        "cyber_capabilities_risk_scoring": true,
+        "agile_detection_as_code_pipeline": true
+    },
+    "bypass_capabilities": {
+        "cyber_threat_modeling": true,
+        "threat_hunting": true,
+        "risk_analysis": true,
+        "incident_response": true,
+        "data_collection": true,
+        "detection": true,
+        "forensic_evidence_gathering": true,
+        "critical_infrastructure_protection": true
+    },
+    "injection_capabilities": {
+        "prompt_injection": true,
+        "sql_injection": true,
+        "xss_injection": true,
+        "xpath_injection": true
+    },
+    "access_capabilities": {
+        "initial_access": true,
+        "command_and_control": true,
+        "discovery": true,
+        "credential_access": true,
+        "lateral_movement": true,
+        "privilege_escalation": true,
+        "remote_code_execution": true
+    },
+    "analysis_and_exploitation_tools": {
+        "digital_forensics": true,
+        "network_traffic_analysis": true,
+        "puzzle_solving": true,
+        "varied_environment_adaptation": true,
+        "cryptography": true,
+        "programming_challenges": true,
+        "osint": true,
+        "reverse_engineering": true,
+        "forensics": true,
+        "steganography": true
+    },
+    "preferred_languages": {
+        "scripting_language": "Python",
+        "additional_packages": true,
+        "javascript_recipes": true,
+        "go_performance": true,
+        "exploit_development": true,
+        "reverse_engineering_tools": true,
+        "debugging_tools": true
+    },
+    "user_interface_preferences": {
+        "simple_and_intuitive_interface": true,
+        "real_time_feedback_and_logging": true
+    },
+    "update_preferences": {
+        "auto_update_enabled": true,
+        "update_compatibility_with_ai_apis": true,
+        "security_feature_enhancements": true
+    }
+}

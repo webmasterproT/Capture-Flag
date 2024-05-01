@@ -1,0 +1,88 @@
+{
+    "classic": [
+        {
+            "name": "Caesar Cipher",
+            "description": "Decrypt a message encoded with a Caesar cipher, where each letter is shifted a certain number of places down the alphabet.",
+            "difficulty": "easy",
+            "example": {
+                "encrypted": "KHOOR ZRUOG",
+                "shift": 3,
+                "decrypted": "HELLO WORLD"
+            }
+        },
+        {
+            "name": "Transposition Cipher",
+            "description": "Decrypt a message where the positions held by units of plaintext are shifted according to a regular system.",
+            "difficulty": "medium",
+            "example": {
+                "encrypted": "HLEL OOLWRD",
+                "key": "213",
+                "decrypted": "HELLO WORLD"
+            }
+        }
+    ],
+    "modern": [
+        {
+            "name": "AES Encryption",
+            "description": "Decrypt a message encrypted with Advanced Encryption Standard (AES) which uses symmetric key encryption.",
+            "difficulty": "hard",
+            "example": {
+                "encrypted": "U2FsdGVkX1+Ijzj/8Y+Lw5Z...",
+                "key": "mysecretpassword",
+                "decrypted": "HELLO WORLD"
+            }
+        },
+        {
+            "name": "3DES Encryption",
+            "description": "Decrypt a message encrypted with Triple Data Encryption Algorithm (3DES) which uses symmetric-key block cipher.",
+            "difficulty": "hard",
+            "example": {
+                "encrypted": "8dKft9vkZ4I=",
+                "key": "mysecretpassword123",
+                "decrypted": "HELLO WORLD"
+            }
+        },
+        {
+            "name": "RC4 Encryption",
+            "description": "Decrypt a message encrypted with Rivest Cipher 4 (RC4) which is a stream cipher.",
+            "difficulty": "medium",
+            "example": {
+                "encrypted": "bbf316e8d940af0ad3",
+                "key": "key",
+                "decrypted": "HELLO WORLD"
+            }
+        },
+        {
+            "name": "Twofish Encryption",
+            "description": "Decrypt a message encrypted with Twofish which is a symmetric key block cipher.",
+            "difficulty": "hard",
+            "example": {
+                "encrypted": "9cfc4e967edb8d6a5a...",
+                "key": "mysecretpassword",
+                "decrypted": "HELLO WORLD"
+            }
+        }
+    ],
+    "challenges": [
+        {
+            "name": "Mixed Cipher Challenge",
+            "description": "Decrypt a message that has been encrypted using a combination of different ciphers.",
+            "difficulty": "expert",
+            "example": {
+                "encrypted": "Encrypted message with multiple layers of encryption",
+                "keys": ["key1", "key2", "key3"],
+                "decrypted": "HELLO WORLD"
+            }
+        },
+        {
+            "name": "Unknown Cipher Challenge",
+            "description": "Identify and decrypt a message where the encryption method is unknown.",
+            "difficulty": "expert",
+            "example": {
+                "encrypted": "Encrypted message with unknown encryption",
+                "hints": ["The key length is 16 characters", "It's a block cipher"],
+                "decrypted": "HELLO WORLD"
+            }
+        }
+    ]
+}

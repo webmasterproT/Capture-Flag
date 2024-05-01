@@ -1,0 +1,84 @@
+{
+    "privilege_escalation_methods": [
+        {
+            "name": "Exploitation of Service Misconfigurations",
+            "description": "Identifying and exploiting misconfigured services or daemons that have excessive privileges.",
+            "vector": "Local",
+            "techniques": [
+                "Exploiting weak file permissions",
+                "Abusing service accounts with high privileges",
+                "Manipulating path variables"
+            ]
+        },
+        {
+            "name": "Scheduled Task Abuse",
+            "description": "Creating or modifying scheduled tasks to execute arbitrary code with elevated privileges.",
+            "vector": "Local",
+            "techniques": [
+                "Registering new scheduled tasks",
+                "Modifying existing tasks",
+                "Hijacking task files"
+            ]
+        },
+        {
+            "name": "DLL Hijacking",
+            "description": "Exploiting the search order of dynamic link libraries to load a malicious DLL.",
+            "vector": "Local",
+            "techniques": [
+                "Placing malicious DLL in search path",
+                "Spoofing legitimate DLLs",
+                "Modifying registry to change DLL search order"
+            ]
+        },
+        {
+            "name": "Token Manipulation",
+            "description": "Manipulating access tokens to impersonate other security contexts.",
+            "vector": "Local",
+            "techniques": [
+                "Creating a token with higher privileges",
+                "Stealing tokens from other processes",
+                "Using impersonation tokens"
+            ]
+        },
+        {
+            "name": "Bypassing User Account Control (UAC)",
+            "description": "Using various methods to bypass UAC and gain elevated privileges.",
+            "vector": "Local",
+            "techniques": [
+                "Exploiting UAC whitelist",
+                "DLL hijacking to bypass UAC",
+                "Using auto-elevate registry keys"
+            ]
+        },
+        {
+            "name": "Pass-the-Hash",
+            "description": "Using captured password hashes to authenticate as a user without the plaintext password.",
+            "vector": "Network",
+            "techniques": [
+                "Injecting hashes into current session",
+                "Using hashes with remote services",
+                "Passing hashes to authenticate to network resources"
+            ]
+        },
+        {
+            "name": "Kerberoasting",
+            "description": "Exploiting the Kerberos protocol to crack service account passwords.",
+            "vector": "Network",
+            "techniques": [
+                "Requesting service tickets",
+                "Extracting tickets for offline cracking",
+                "Abusing weak service account passwords"
+            ]
+        },
+        {
+            "name": "Exploiting Vulnerable Software",
+            "description": "Leveraging vulnerabilities in software to escalate privileges.",
+            "vector": "Local",
+            "techniques": [
+                "Buffer overflows",
+                "Use-after-free vulnerabilities",
+                "Privilege escalation exploits in system services"
+            ]
+        }
+    ]
+}

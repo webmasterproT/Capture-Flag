@@ -1,0 +1,84 @@
+{
+    "programming_challenges": [
+        {
+            "id": "classic_cipher",
+            "description": "Solve the given classic cipher text using a Caesar cipher decryption technique.",
+            "input": "Encoded text with a shift value",
+            "output": "Decoded plain text",
+            "difficulty": "easy",
+            "category": "Cryptography",
+            "function": "solve_caesar_cipher",
+            "script": "cryptography.py"
+        },
+        {
+            "id": "modern_crypto",
+            "description": "Decrypt the given cipher text which is encrypted using AES encryption.",
+            "input": "AES encrypted text with key",
+            "output": "Decrypted plain text",
+            "difficulty": "hard",
+            "category": "Cryptography",
+            "function": "decrypt_aes",
+            "script": "cryptography.py"
+        },
+        {
+            "id": "buffer_overflow",
+            "description": "Exploit the buffer overflow vulnerability in a given program to execute arbitrary code.",
+            "input": "Vulnerable program binary and exploit code",
+            "output": "Success message if arbitrary code is executed",
+            "difficulty": "hard",
+            "category": "Exploit Development",
+            "function": "exploit_buffer_overflow",
+            "script": "exploit_development.py"
+        },
+        {
+            "id": "sql_injection",
+            "description": "Perform an SQL injection on a simulated database to retrieve hidden data.",
+            "input": "Database connection details and injection point",
+            "output": "Retrieved sensitive data",
+            "difficulty": "medium",
+            "category": "Injection",
+            "function": "perform_sql_injection",
+            "script": "sql_injection.py"
+        },
+        {
+            "id": "reverse_engineer_bin",
+            "description": "Reverse engineer the provided binary to understand its functionality and find hidden messages.",
+            "input": "Binary executable file",
+            "output": "Functionality description and hidden messages",
+            "difficulty": "hard",
+            "category": "Reverse Engineering",
+            "function": "reverse_engineer_binary",
+            "script": "reverse_engineering.py"
+        },
+        {
+            "id": "osint_challenge",
+            "description": "Use open-source intelligence techniques to find the target's digital footprint.",
+            "input": "Target's alias or username",
+            "output": "Collected digital footprint information",
+            "difficulty": "medium",
+            "category": "OSINT",
+            "function": "collect_osint_data",
+            "script": "osint.py"
+        },
+        {
+            "id": "steganography_detect",
+            "description": "Detect and decode the hidden message in the provided image or audio file.",
+            "input": "Image or audio file with hidden message",
+            "output": "Decoded hidden message",
+            "difficulty": "medium",
+            "category": "Steganography",
+            "function": "decode_steganography",
+            "script": "steganography.py"
+        },
+        {
+            "id": "forensic_log_analysis",
+            "description": "Analyze the provided log files to detect signs of system infiltration.",
+            "input": "System log files",
+            "output": "Infiltration report",
+            "difficulty": "medium",
+            "category": "Forensics",
+            "function": "analyze_logs_for_infiltration",
+            "script": "forensics.py"
+        }
+    ]
+}

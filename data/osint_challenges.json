@@ -1,0 +1,72 @@
+{
+    "osint_challenges": [
+        {
+            "id": "OSINT001",
+            "title": "Social Media Sleuth",
+            "description": "Identify the individual behind a series of anonymous social media posts that are of national security interest.",
+            "hints": [
+                "Look for unique phrases or hashtags used across different platforms.",
+                "Analyze metadata from posted images for geolocation information.",
+                "Cross-reference usernames with other public databases."
+            ],
+            "difficulty": "Intermediate",
+            "resources": [
+                "data/osint_sources.json",
+                "utils/parsers.py",
+                "utils/helpers.py"
+            ],
+            "solution": "data/user_activity_logs.json"
+        },
+        {
+            "id": "OSINT002",
+            "title": "Domain Deep Dive",
+            "description": "Uncover the ownership history of a domain used for coordinating cyber attacks against critical infrastructure.",
+            "hints": [
+                "Use WHOIS databases to track historical domain registration data.",
+                "Investigate DNS records for changes in hosting providers.",
+                "Search for domain-related transactions on web archives."
+            ],
+            "difficulty": "Advanced",
+            "resources": [
+                "data/osint_sources.json",
+                "utils/parsers.py",
+                "utils/helpers.py"
+            ],
+            "solution": "data/threat_hunting_logs.json"
+        },
+        {
+            "id": "OSINT003",
+            "title": "Cryptic Communications",
+            "description": "Decrypt a series of intercepted messages believed to contain instructions for an upcoming cyber operation.",
+            "hints": [
+                "Identify the encryption method used in the communications.",
+                "Look for repeating patterns or known plaintext attacks.",
+                "Consider the use of steganography in image-based messages."
+            ],
+            "difficulty": "Expert",
+            "resources": [
+                "data/crypto_challenges.json",
+                "utils/converters.py",
+                "utils/helpers.py"
+            ],
+            "solution": "data/forensic_investigation_reports.json"
+        },
+        {
+            "id": "OSINT004",
+            "title": "Rogue Operator",
+            "description": "Track the digital footprint of a suspected insider threat who is leaking classified information.",
+            "hints": [
+                "Monitor for data dumps on dark web marketplaces.",
+                "Analyze network logs for unauthorized data exfiltration.",
+                "Use behavior analysis to correlate activity patterns with known work schedules."
+            ],
+            "difficulty": "Expert",
+            "resources": [
+                "data/osint_sources.json",
+                "data/user_activity_logs.json",
+                "utils/helpers.py"
+            ],
+            "solution": "data/incident_response_logs.json"
+        }
+    ]
+}

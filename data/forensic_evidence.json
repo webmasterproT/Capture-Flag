@@ -1,0 +1,68 @@
+{
+    "forensic_evidence": [
+        {
+            "id": "FE001",
+            "type": "log_analysis",
+            "description": "Analysis of server logs for unauthorized access attempts.",
+            "timestamp": "2023-04-01T10:00:00Z",
+            "findings": [
+                {
+                    "entry_id": "LA10023",
+                    "detected_anomaly": "Multiple failed login attempts from a single IP.",
+                    "potential_impact": "Brute force attack attempt on SSH service.",
+                    "recommended_action": "Increase monitoring on the source IP and implement account lockout policy."
+                }
+            ],
+            "status": "open",
+            "assigned_to": "Team Alpha"
+        },
+        {
+            "id": "FE002",
+            "type": "network_traffic",
+            "description": "Suspicious outbound traffic detected.",
+            "timestamp": "2023-04-01T11:30:00Z",
+            "findings": [
+                {
+                    "entry_id": "NT45908",
+                    "detected_anomaly": "Large amount of data sent to an unknown external address.",
+                    "potential_impact": "Possible data exfiltration by an insider threat.",
+                    "recommended_action": "Isolate affected systems and begin an in-depth investigation."
+                }
+            ],
+            "status": "open",
+            "assigned_to": "Team Beta"
+        },
+        {
+            "id": "FE003",
+            "type": "file_integrity",
+            "description": "Unexpected changes in system files detected.",
+            "timestamp": "2023-04-01T12:45:00Z",
+            "findings": [
+                {
+                    "entry_id": "FI98234",
+                    "detected_anomaly": "System binary has been replaced with a modified version.",
+                    "potential_impact": "Rootkit installation or system compromise.",
+                    "recommended_action": "Perform a full system scan and compare with known good hashes."
+                }
+            ],
+            "status": "open",
+            "assigned_to": "Team Gamma"
+        },
+        {
+            "id": "FE004",
+            "type": "steganography",
+            "description": "Suspicious image file received in email.",
+            "timestamp": "2023-04-01T14:20:00Z",
+            "findings": [
+                {
+                    "entry_id": "ST56789",
+                    "detected_anomaly": "Image contains hidden data as revealed by steganalysis tools.",
+                    "potential_impact": "Covert communication channel for exfiltrating sensitive information.",
+                    "recommended_action": "Trace the origin of the email and analyze the extracted data for further clues."
+                }
+            ],
+            "status": "open",
+            "assigned_to": "Team Delta"
+        }
+    ]
+}

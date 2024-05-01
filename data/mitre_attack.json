@@ -1,0 +1,112 @@
+{
+    "techniques": [
+        {
+            "id": "T1000",
+            "name": "Initial Access",
+            "description": "The adversary is trying to get into your network.",
+            "tactics": ["Initial Access"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Authentication logs", "VPN logs", "E-mail gateway"],
+            "detection": ["Multi-factor authentication", "Anomaly detection on user behavior"]
+        },
+        {
+            "id": "T1001",
+            "name": "Execution",
+            "description": "The adversary is trying to run malicious code.",
+            "tactics": ["Execution"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Process monitoring", "Command-line interface monitoring"],
+            "detection": ["Whitelisting of applications", "Behavioral analytics"]
+        },
+        {
+            "id": "T1002",
+            "name": "Persistence",
+            "description": "The adversary is trying to maintain their foothold.",
+            "tactics": ["Persistence"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Registry startup keys", "Scheduled tasks"],
+            "detection": ["Change management logs", "File integrity monitoring"]
+        },
+        {
+            "id": "T1003",
+            "name": "Privilege Escalation",
+            "description": "The adversary is trying to gain higher-level permissions.",
+            "tactics": ["Privilege Escalation"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["System logs", "Authentication logs"],
+            "detection": ["User account management monitoring", "Alerts on new admin accounts"]
+        },
+        {
+            "id": "T1004",
+            "name": "Defense Evasion",
+            "description": "The adversary is trying to avoid being detected.",
+            "tactics": ["Defense Evasion"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Anti-virus", "File monitoring"],
+            "detection": ["Heuristic-based detection", "Signature-based detection"]
+        },
+        {
+            "id": "T1005",
+            "name": "Credential Access",
+            "description": "The adversary is trying to steal account names and passwords.",
+            "tactics": ["Credential Access"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Credential dumping", "Input capture"],
+            "detection": ["Account lockouts", "Newly registered credentials"]
+        },
+        {
+            "id": "T1006",
+            "name": "Discovery",
+            "description": "The adversary is trying to figure out your environment.",
+            "tactics": ["Discovery"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["File and directory discovery", "System owner/user discovery"],
+            "detection": ["Anomalies in executed commands", "Enumeration from unusual locations"]
+        },
+        {
+            "id": "T1007",
+            "name": "Lateral Movement",
+            "description": "The adversary is trying to move through your environment.",
+            "tactics": ["Lateral Movement"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Authentication logs", "Internal network monitoring"],
+            "detection": ["Abnormal network patterns", "Unusual remote service access"]
+        },
+        {
+            "id": "T1008",
+            "name": "Collection",
+            "description": "The adversary is trying to gather data of interest to their goal.",
+            "tactics": ["Collection"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Data loss prevention", "Network traffic monitoring"],
+            "detection": ["Unusual data flows", "Large data transfers"]
+        },
+        {
+            "id": "T1009",
+            "name": "Command and Control",
+            "description": "The adversary is trying to communicate with compromised systems to control them.",
+            "tactics": ["Command and Control"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Network protocol analysis", "Domain name monitoring"],
+            "detection": ["Unusual outbound traffic", "DNS requests to known bad domains"]
+        },
+        {
+            "id": "T1010",
+            "name": "Exfiltration",
+            "description": "The adversary is trying to steal data.",
+            "tactics": ["Exfiltration"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Network traffic monitoring", "File monitoring"],
+            "detection": ["Detection of data packets with sensitive information", "Monitoring for large uploads to external services"]
+        },
+        {
+            "id": "T1011",
+            "name": "Impact",
+            "description": "The adversary is trying to manipulate, interrupt, or destroy your systems and data.",
+            "tactics": ["Impact"],
+            "platforms": ["Windows", "macOS", "Linux"],
+            "data_sources": ["Data integrity checks", "Resource consumption monitoring"],
+            "detection": ["Alerts on file encryption activities", "System performance anomalies"]
+        }
+    ]
+}

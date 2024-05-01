@@ -1,0 +1,84 @@
+{
+    "privilege_escalation_vectors": [
+        {
+            "name": "Buffer Overflow",
+            "description": "Exploiting a buffer overflow to gain higher privileges by overwriting a function's return address on the stack.",
+            "techniques": [
+                {
+                    "name": "Stack-based Buffer Overflow",
+                    "vector": "Overwrite the return address in a vulnerable function's stack frame to redirect execution to attacker-controlled code."
+                },
+                {
+                    "name": "Heap-based Buffer Overflow",
+                    "vector": "Corrupt dynamic memory allocation management structures to execute arbitrary code."
+                }
+            ]
+        },
+        {
+            "name": "Privilege Escalation via SUID Executables",
+            "description": "Abusing SUID binaries that execute with elevated privileges to perform unauthorized actions.",
+            "techniques": [
+                {
+                    "name": "SUID Binary Abuse",
+                    "vector": "Identify SUID binaries that can be exploited to escalate privileges and execute arbitrary commands."
+                }
+            ]
+        },
+        {
+            "name": "Path Interception",
+            "description": "Placing a malicious executable in the search path of an application or service that executes with higher privileges.",
+            "techniques": [
+                {
+                    "name": "DLL Hijacking",
+                    "vector": "Place a malicious DLL in the search path of an application that loads libraries dynamically."
+                },
+                {
+                    "name": "Binary Planting",
+                    "vector": "Place a malicious binary in a directory that is earlier in the search path than the legitimate binary."
+                }
+            ]
+        },
+        {
+            "name": "Exploitation of Service Misconfigurations",
+            "description": "Taking advantage of misconfigured services or daemons that run with elevated privileges.",
+            "techniques": [
+                {
+                    "name": "Writable Service Executable",
+                    "vector": "Modify the executable of a service that runs with elevated privileges to include malicious code."
+                },
+                {
+                    "name": "Unquoted Service Path",
+                    "vector": "Exploit service paths that contain spaces and are not enclosed in quotes to execute arbitrary code."
+                }
+            ]
+        },
+        {
+            "name": "Kernel Exploits",
+            "description": "Exploiting vulnerabilities in the operating system kernel to gain higher privileges.",
+            "techniques": [
+                {
+                    "name": "Race Conditions",
+                    "vector": "Exploit timing windows to manipulate shared resources and escalate privileges."
+                },
+                {
+                    "name": "Use-After-Free",
+                    "vector": "Exploit the deallocation of memory to execute code at the kernel level."
+                }
+            ]
+        },
+        {
+            "name": "Credential Access",
+            "description": "Obtaining credentials of higher-privileged accounts to gain elevated access.",
+            "techniques": [
+                {
+                    "name": "Password Dumping",
+                    "vector": "Extract passwords or hashes from the system and crack them to gain access to privileged accounts."
+                },
+                {
+                    "name": "Pass-the-Hash",
+                    "vector": "Use captured password hashes to authenticate as a privileged user without needing the plaintext password."
+                }
+            ]
+        }
+    ]
+}

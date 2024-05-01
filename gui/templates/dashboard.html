@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/dashboard.js"></script>
+</head>
+<body>
+    <div id="dashboard-container">
+        <header>
+            <img src="assets/logo.png" alt="Logo" id="logo">
+            <h1>Security Operations Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="logs.html">Logs</a></li>
+                <li><a href="update.html">Update</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="status-overview">
+                <h2>Status Overview</h2>
+                <div id="status-cards">
+                    <div class="card">
+                        <h3>System Health</h3>
+                        <p id="system-health">Loading...</p>
+                    </div>
+                    <div class="card">
+                        <h3>Active Threats</h3>
+                        <p id="active-threats">Loading...</p>
+                    </div>
+                    <div class="card">
+                        <h3>Operation Status</h3>
+                        <p id="operation-status">Loading...</p>
+                    </div>
+                </div>
+            </section>
+            <section id="action-items">
+                <h2>Action Items</h2>
+                <div id="action-list">
+                    <!-- Action items will be dynamically injected here by the dashboard.js script -->
+                </div>
+            </section>
+            <section id="recent-activity">
+                <h2>Recent Activity</h2>
+                <div id="activity-log">
+                    <!-- Recent activity logs will be displayed here -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 National Security Operations</p>
+        </footer>
+    </div>
+    <script>
+        // Initialize the dashboard functionalities
+        document.addEventListener('DOMContentLoaded', function() {
+            initialize_system();
+        });
+    </script>
+</body>
+</html>

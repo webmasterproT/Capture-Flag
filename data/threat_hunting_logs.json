@@ -1,0 +1,54 @@
+{
+    "threat_hunting_logs": [
+        {
+            "timestamp": "2023-04-01T12:00:00Z",
+            "session_id": "TH-001",
+            "user_id": "user-123",
+            "description": "Initiated threat hunting using AI-driven pattern recognition on network traffic.",
+            "outcome": "Anomalous traffic detected and flagged for further investigation.",
+            "actions_taken": [
+                "Isolated suspicious traffic",
+                "Generated alerts",
+                "Initiated automated incident response protocol"
+            ],
+            "tools_used": [
+                "AI pattern recognition module",
+                "Network traffic analyzer",
+                "Automated response system"
+            ],
+            "indicators_of_compromise": [
+                "Unexpected outbound traffic",
+                "Irregular login patterns",
+                "Unusual data encryption"
+            ],
+            "recommendations": [
+                "Increase monitoring on affected nodes",
+                "Update firewall rules",
+                "Conduct a full system audit"
+            ]
+        },
+        {
+            "timestamp": "2023-04-02T15:30:00Z",
+            "session_id": "TH-002",
+            "user_id": "user-456",
+            "description": "Performed deep scan for rootkits and advanced persistent threats (APTs) using heuristic analysis.",
+            "outcome": "No threats detected. System integrity maintained.",
+            "actions_taken": [
+                "Completed system scan",
+                "Reviewed heuristic analysis reports",
+                "Confirmed false positive alerts"
+            ],
+            "tools_used": [
+                "Heuristic analyzer",
+                "Rootkit scanner",
+                "APTs detection toolkit"
+            ],
+            "indicators_of_compromise": [],
+            "recommendations": [
+                "Refine heuristic analysis parameters",
+                "Schedule regular deep scans",
+                "Enhance endpoint protection"
+            ]
+        }
+    ]
+}

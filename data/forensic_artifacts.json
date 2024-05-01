@@ -1,0 +1,136 @@
+{
+    "forensic_artifact_types": [
+        {
+            "type": "log_files",
+            "description": "System and application logs that record system events and user activities.",
+            "examples": [
+                "/var/log/syslog",
+                "/var/log/auth.log",
+                "C:\\Windows\\System32\\Winevt\\Logs\\Security.evtx"
+            ]
+        },
+        {
+            "type": "network_traffic",
+            "description": "Captured packets and network flow data that provide insights into network activities.",
+            "examples": [
+                "pcap files",
+                "netflow data"
+            ]
+        },
+        {
+            "type": "registry_data",
+            "description": "Windows registry hives that store configuration settings and options on Microsoft Windows operating systems.",
+            "examples": [
+                "HKEY_LOCAL_MACHINE\\SYSTEM",
+                "HKEY_CURRENT_USER\\Software"
+            ]
+        },
+        {
+            "type": "file_system_info",
+            "description": "Metadata and content of files that can indicate user actions and system operations.",
+            "examples": [
+                "NTFS metadata",
+                "ext4 journaling"
+            ]
+        },
+        {
+            "type": "memory_images",
+            "description": "Snapshots of physical memory of a computer which can contain valuable information about the running state of the system.",
+            "examples": [
+                "RAM dumps",
+                "hiberfil.sys"
+            ]
+        },
+        {
+            "type": "binary_executables",
+            "description": "Executable files that may contain malicious code or be part of a software vulnerability exploitation.",
+            "examples": [
+                "malware samples",
+                "exploit binaries"
+            ]
+        },
+        {
+            "type": "email_archives",
+            "description": "Stored email messages that may contain evidence of phishing attempts or other malicious communications.",
+            "examples": [
+                "Outlook PST files",
+                "Maildir format storage"
+            ]
+        },
+        {
+            "type": "browser_artifacts",
+            "description": "Data from web browsers that can reveal user activities and interactions with web services.",
+            "examples": [
+                "history databases",
+                "cookies",
+                "web cache"
+            ]
+        },
+        {
+            "type": "virtual_machine_snapshots",
+            "description": "Saved states of virtual machines which can be analyzed for evidence of system states and activities.",
+            "examples": [
+                "VMware .vmsn files",
+                "VirtualBox .sav files"
+            ]
+        },
+        {
+            "type": "encrypted_files",
+            "description": "Files that have been encrypted, potentially to conceal information or as part of a ransomware attack.",
+            "examples": [
+                "PGP encrypted documents",
+                "BitLocker encrypted volumes"
+            ]
+        },
+        {
+            "type": "steganography_files",
+            "description": "Files that may contain hidden data within their structure or content.",
+            "examples": [
+                "images with LSB encoding",
+                "audio files with embedded messages"
+            ]
+        }
+    ],
+    "forensic_tool_references": [
+        {
+            "tool_name": "Wireshark",
+            "usage": "Analyzing network packets and flows.",
+            "reference_file": "network_analysis.py"
+        },
+        {
+            "tool_name": "Volatility",
+            "usage": "Memory forensics to extract information from memory dumps.",
+            "reference_file": "memory_analysis.py"
+        },
+        {
+            "tool_name": "Autopsy",
+            "usage": "File system analysis and recovery of deleted files.",
+            "reference_file": "file_system_analysis.py"
+        },
+        {
+            "tool_name": "RegRipper",
+            "usage": "Registry data extraction and analysis.",
+            "reference_file": "registry_analysis.py"
+        },
+        {
+            "tool_name": "Binwalk",
+            "usage": "Firmware and binary analysis for reverse engineering.",
+            "reference_file": "binary_analysis.py"
+        },
+        {
+            "tool_name": "FTK Imager",
+            "usage": "Creating and analyzing disk images.",
+            "reference_file": "disk_imaging.py"
+        },
+        {
+            "tool_name": "Ghidra",
+            "usage": "Reverse engineering of binary executables and malware.",
+            "reference_file": "reverse_engineering.py"
+        },
+        {
+            "tool_name": "Steghide",
+            "usage": "Detection and extraction of steganography in files.",
+            "reference_file": "steganography.py"
+        }
+    ]
+}
